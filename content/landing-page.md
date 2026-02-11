@@ -1,54 +1,72 @@
-# Scrappy Kin – Reclaim Your Privacy, Together
+# Scrappy Kin — Privacy You Own
 
 ---
 
-## Why Scrappy Kin?
+## The privacy service that doesn't ask for your trust.
 
-**Automated removal from 800+ data brokers** – Our service files GDPR and CCPA-compliant deletion requests to hundreds of data brokers every 6 months, so you can focus on living your life instead of fighting for your privacy.
+Most opt-out services work the same way: you give them your personal data, and you trust them to handle it responsibly while they talk to data brokers for you.
 
-**Privacy-first by design** – Built by privacy advocates who understand that protecting your data means never compromising on security. EU-hosted infrastructure, strong encryption, and minimal data retention.
+Scrappy Kin is different. **We don't want your data.**
 
-**Community-driven protection** – We're growing through trust, one person at a time. When we protect your privacy, we're protecting everyone's. We're in this together.
+- **Your data stays on your device.**
+- **You do the opt-outs yourself.**
+- **The code is open source.**
+
+We build the tools. You wield the power.
 
 ---
 
 ## How It Works
 
-| Step | What Happens |
-|------|--------------|
-| **1️⃣ Sign Up** | Create your account and securely provide the information needed for deletion requests. |
-| **2️⃣ Encrypt & Store** | Your data is encrypted with AES-256 and stored on EU-based servers in Germany. |
-| **3️⃣ Automated Requests** | Every 6 months, we automatically send legally-compliant deletion requests to 800+ data brokers on your behalf. |
-| **4️⃣ Email Updates** | Receive clear email reports showing which requests were sent, delivery status, and any broker responses. |
-| **5️⃣ Ongoing Protection** | Continuous 6-month cycles catch new listings as brokers re-acquire data, keeping your digital footprint minimal. |
+We replace the "black box" of expensive concierge services with a daily habit that puts you in control.
+
+1.  **You do the work (briefly).**
+    The app guides you through one broker opt-out at a time. It takes about two minutes a day.
+
+2.  **We provide the map.**
+    Our open-source tools handle the complexity—finding the forms, navigating the dark patterns, and autofilling the tedious parts. You just click "Submit."
+
+3.  **You see the result.**
+    Because you do it yourself, you know it happened. No waiting for a monthly report to see if a broker actually complied.
 
 ---
 
-## What You Gain
+## Why We Built This
 
-**Set it and forget it** – After signup, the service runs automatically every 6 months. No manual work required.
+**Privacy shouldn't be a luxury product.**
+Existing services charge $100–$300/year because they hire humans to solve CAPTCHAs for you. We stripped that cost out so we can charge **$25/year**.
 
-**Peace of mind** – Stop unwanted marketing calls, spam, and reduce your exposure to identity theft.
+**Trust requires verification.**
+"Trust us, we're the good guys" isn't a security model. Scrappy Kin is designed so that we *can't* misuse your data—because we never have it.
 
-**Strong security** – AES-256 encryption at rest on EU servers (Germany). Minimal data retention with automatic 7-day purges of run history.
-
-**Complete transparency** – Email reports show exactly which brokers were contacted, when, and with what results. You're always in the loop.
-
-**EU data protection** – All servers and processing in Germany (Hetzner). Subject to strict GDPR protections. Your data never touches US servers.
-
----
-
-## Join the Scrappy Kin Community
-
-We're currently in private beta. Public enrollment opens in 2026.
+**Annoyance is power.**
+Data brokers make opting out annoying on purpose. By doing it ourselves and sharing the data on who makes it hardest, we build a public record that regulators and journalists can use to force change.
 
 ---
 
-**About Scrappy Kin**
+## Roadmap & Pricing
 
-Built with care by privacy advocates who believe data rights should be easy to exercise, not a luxury. Starting small, growing through trust, always putting privacy first.
+**Current Status:** Pre-launch (Alpha)
 
-**Technology:** EU-hosted (Germany) • AES-256 encryption • GDPR & CCPA compliant • Automated 6-month cycles
+### Phase 1: The Email Tool (Coming Feb 2026)
+**Price: $5 (One-time Early Bird)**
+- Scans your Gmail for broker interactions.
+- Helps you finish opt-outs via email.
+- **You keep 100% control of your inbox.**
+
+### Phase 2: The Full App (Coming mid-2026)
+**Price: $25/year**
+- Daily portal opt-outs.
+- Progress tracking.
+- Community broker stats.
+
+---
+
+## Our Stance
+
+*   **Zero-Trust Architecture:** We assume you shouldn't trust us. Our code is public so you can verify that.
+*   **Privacy-First:** We don't collect analytics on who you are or what you opt out of.
+*   **Cooperative:** We publish aggregate data on broker bad behavior. Your friction helps everyone else.
 
 ---
 
