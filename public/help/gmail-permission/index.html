@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Scrappy Kin uses Gmail permission - Scrappy Kin</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-pink': '#ff006e',
+                        'brand-pink-light': '#ffb3d9',
+                    },
+                    fontFamily: {
+                        'mono': ['Space Mono', 'monospace'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white font-sans">
+    <header class="border-b border-gray-200 py-6">
+        <div class="max-w-7xl mx-auto px-8 lg:px-32">
+            <div class="flex items-center gap-3">
+                <a href="/" class="flex items-center gap-3">
+                    <img src="/images/scrappy-kin.svg" alt="Scrappy Kin Logo" class="h-12 w-auto">
+                    <h1 class="text-2xl font-mono text-brand-pink">Scrappy Kin</h1>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-20">
+        <div class="max-w-4xl mx-auto px-8 lg:px-16">
+            <a href="/" class="inline-block text-sm font-mono text-brand-pink mb-8">&larr; Back to home</a>
+            <h2 class="text-4xl md:text-5xl font-mono text-gray-900 mb-8">How Scrappy Kin uses Gmail permission</h2>
+            <div class="text-lg text-gray-600 leading-relaxed space-y-6">
+                <p>Scrappy Kin asks for Gmail permission for one narrow reason: to help you send broker opt-out emails from your own account.</p>
+
+                <div>
+                    <h3 class="text-2xl font-mono text-gray-900 mb-4">What this permission allows:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>send an email that you review and choose to send</li>
+                        <li>use your Gmail account as the sender</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-mono text-gray-900 mb-4">What it does not allow:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>read your inbox</li>
+                        <li>browse your messages</li>
+                        <li>manage your mailbox</li>
+                        <li>store Gmail data on Scrappy Kin servers</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-mono text-gray-900 mb-4">Why we use it:</h3>
+                    <p>Many brokers still require email as part of their opt-out process. Sending the request from your own account keeps you in control and avoids handing sensitive personal data to another service.</p>
+                </div>
+
+                <p class="text-gray-900">Scrappy Kin uses Gmail permission only for sending email.</p>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-8 lg:px-32 mt-20">
+            <h3 class="text-2xl font-mono text-gray-900 mb-8">Related help</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl">
+                <a href="/help/how-scrappy-kin-handles-your-data" class="border-2 border-gray-200 rounded-lg p-6 block hover:border-brand-pink transition-colors">
+                    <h4 class="text-lg font-mono text-gray-900 mb-2">How Scrappy Kin handles your data</h4>
+                    <p class="text-gray-600 text-sm">A plain-language overview of how Scrappy Kin minimizes trust and keeps control with you.</p>
+                </a>
+                <a href="/help/how-opt-out-emails-are-sent" class="border-2 border-gray-200 rounded-lg p-6 block hover:border-brand-pink transition-colors">
+                    <h4 class="text-lg font-mono text-gray-900 mb-2">How opt-out emails are sent</h4>
+                    <p class="text-gray-600 text-sm">See the exact flow for reviewing and sending broker opt-out emails from your own Gmail account.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-200 py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-8 lg:px-32">
+            <div class="border-t border-gray-200 pt-8 flex flex-wrap items-center gap-2 text-sm text-gray-500">
+                <span>Local-first</span>
+                <span>•</span>
+                <span>No server-side personal data</span>
+                <span>•</span>
+                <span>Open source</span>
+                <span>•</span>
+                <span>GDPR &amp; CCPA aware</span>
+                <span>•</span>
+                <span>Two-minute privacy habit</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
