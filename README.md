@@ -17,7 +17,8 @@ scrappykin/
 ├── docker-compose.yml      # Docker configuration
 ├── nginx.conf              # Nginx web server config
 ├── Caddyfile.snippet       # Caddy reverse proxy config
-├── deploy.sh               # Deployment script
+├── scripts/
+│   └── deploy.sh           # Deployment script
 └── README.md               # This file
 ```
 
@@ -55,48 +56,44 @@ Then visit http://localhost:8000
 ### Prerequisites
 
 1. DNS configured: A records for `scrappykin.com` and `www.scrappykin.com` pointing to `46.224.23.202`
-2. SSH access to VPS configured as `vps-hetzner`
+2. SSH access to `vps-ops` configured for wrapper-based deploys
 
 ### Deploy to VPS
 
 ```bash
-chmod +x deploy.sh
-./deploy.sh
+chmod +x scripts/deploy.sh
+./scripts/deploy.sh
 ```
 
 The script will:
-1. Create the service directory on the VPS
-2. Upload all files
-3. Prompt you to update the Caddyfile
-4. Restart Caddy
-5. Start the Scrappykin container
+1. Push your current branch to `origin/main`
+2. Deploy `scrappykin/` via `service-deploy`
+3. Restart the service via `service-restart`
+4. Show you the container status
 
 ### Manual Deployment Steps
 
 If you prefer to deploy manually:
 
-1. **Copy files to VPS:**
+1. **Push the repo:**
    ```bash
-   ssh vps-hetzner "mkdir -p /opt/services/scrappykin"
-   rsync -avz ./public/ vps-hetzner:/opt/services/scrappykin/public/
-   rsync -avz ./docker-compose.yml ./nginx.conf vps-hetzner:/opt/services/scrappykin/
+   git push origin main
    ```
 
-2. **Update Caddyfile:**
+2. **Deploy the service:**
    ```bash
-   ssh vps-hetzner "nano /opt/services/caddy/Caddyfile"
-   ```
-   
-   Add the content from `Caddyfile.snippet`
-
-3. **Restart Caddy:**
-   ```bash
-   ssh vps-hetzner "cd /opt/services/caddy && docker compose restart"
+   ssh vps-ops "sudo service-deploy scrappykin"
    ```
 
-4. **Start Scrappykin:**
+3. **Restart Scrappykin:**
    ```bash
-   ssh vps-hetzner "cd /opt/services/scrappykin && docker compose up -d"
+   ssh vps-ops "sudo service-restart scrappykin"
+   ```
+
+4. **Check status / logs:**
+   ```bash
+   ssh vps-ops "sudo service-inspect ps scrappykin"
+   ssh vps-ops "sudo service-logs scrappykin 50"
    ```
 
 ## Updating Content
@@ -104,36 +101,36 @@ If you prefer to deploy manually:
 ### Update Legal Pages
 
 1. Edit `public/tos.html` or `public/privacy.html` locally
-2. Run `./deploy.sh` to push changes
+2. Run `./scripts/deploy.sh` to push changes
 
 ### Update Home Page
 
 1. Edit `public/index.html` locally
-2. Run `./deploy.sh` to push changes
+2. Run `./scripts/deploy.sh` to push changes
 
 ### Update Styles
 
 1. Edit `public/css/style.css` for custom CSS
 2. Modify Tailwind classes directly in HTML files
-3. Run `./deploy.sh` to push changes
+3. Run `./scripts/deploy.sh` to push changes
 
 ## Management Commands
 
 ```bash
 # View logs
-ssh vps-hetzner "docker logs scrappykin-web -f"
+ssh vps-ops "sudo service-logs scrappykin 50"
 
 # Restart service
-ssh vps-hetzner "cd /opt/services/scrappykin && docker compose restart"
+ssh vps-ops "sudo service-restart scrappykin"
 
 # Stop service
-ssh vps-hetzner "cd /opt/services/scrappykin && docker compose down"
+ssh vps-ops "sudo service-down scrappykin"
 
 # Start service
-ssh vps-hetzner "cd /opt/services/scrappykin && docker compose up -d"
+ssh vps-ops "sudo service-up scrappykin"
 
 # Check status
-ssh vps-hetzner "docker ps | grep scrappykin"
+ssh vps-ops "sudo service-inspect ps scrappykin"
 ```
 
 ## Features
@@ -187,18 +184,18 @@ TTL: 300
 
 ### Site not loading
 - Check DNS propagation: `dig scrappykin.com`
-- Check container status: `ssh vps-hetzner "docker ps | grep scrappykin"`
-- Check logs: `ssh vps-hetzner "docker logs scrappykin-web"`
+- Check container status: `ssh vps-ops "sudo service-inspect ps scrappykin"`
+- Check logs: `ssh vps-ops "sudo service-logs scrappykin 50"`
 
 ### HTTPS not working
 - Wait 5-10 minutes for Let's Encrypt certificate
-- Check Caddy logs: `ssh vps-hetzner "docker logs caddy"`
+- Check Caddy logs: `ssh vps-ops "sudo service-logs caddy 50"`
 - Verify DNS is pointing to correct IP
 
 ### Changes not appearing
 - Clear browser cache
-- Verify files were uploaded: `ssh vps-hetzner "ls -la /opt/services/scrappykin/public/"`
-- Restart container: `ssh vps-hetzner "cd /opt/services/scrappykin && docker compose restart"`
+- Verify compose definition: `ssh vps-ops "sudo service-inspect compose scrappykin"`
+- Restart container: `ssh vps-ops "sudo service-restart scrappykin"`
 
 ## License
 
