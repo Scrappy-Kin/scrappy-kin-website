@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How opt-out emails are sent - Scrappy Kin</title>
+    <title>Analytics, diagnostics, and bug reports - Scrappy Kin</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="/shared/design-foundation/assets/logo/scrappy-kin-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,47 +45,53 @@
     <main class="site-section">
         <div class="site-shell site-shell--reading site-stack">
             <a href="/" class="back-link inline-block text-sm text-brand-pink">&larr; Back to home</a>
-            <h1 class="text-4xl md:text-5xl text-gray-900">How opt-out emails are sent</h1>
+            <h1 class="text-4xl md:text-5xl text-gray-900">Analytics, diagnostics, and bug reports</h1>
             <div class="site-flow text-gray-600">
-                <p>Scrappy Kin helps you send broker opt-out requests by email from your own Gmail account.</p>
+                <p>Scrappy Kin does not include analytics, crash reporting, or automatic bug telemetry. If support sees a bug report, it is because you chose to send it.</p>
 
                 <div>
-                    <h3 class="text-gray-900 mb-4">The flow works like this:</h3>
+                    <h3 class="text-gray-900 mb-4">What the app does not do:</h3>
                     <ul class="list-disc pl-6 space-y-2">
-                        <li>Scrappy Kin shows you where to act</li>
-                        <li>it prepares the request</li>
-                        <li>you review it</li>
-                        <li>you choose whether to send it</li>
-                        <li>the email goes out from your account</li>
-                        <li>any reply comes back to your inbox</li>
+                        <li>no analytics SDKs or third-party tracking tools</li>
+                        <li>no automatic crash reporting</li>
+                        <li>no background event tracking, session replay, or behavior analytics</li>
+                        <li>no diagnostics uploaded to our servers</li>
                     </ul>
                 </div>
 
                 <div>
-                    <h3 class="text-gray-900 mb-4">Scrappy Kin does not:</h3>
+                    <h3 class="text-gray-900 mb-4">What diagnostics do exist:</h3>
                     <ul class="list-disc pl-6 space-y-2">
-                        <li>send messages without your action</li>
-                        <li>read your inbox</li>
-                        <li>manage your mailbox</li>
-                        <li>store Gmail data on its servers</li>
+                        <li>an optional diagnostics feature in Settings</li>
+                        <li>a small plain-text troubleshooting log stored on the device</li>
+                        <li>diagnostics are off by default and opt-in</li>
                     </ul>
                 </div>
 
-                <p class="text-gray-900">The point is to keep the send in your hands while making the process easier to keep up with.</p>
+                <div>
+                    <h3 class="text-gray-900 mb-4">How sharing works:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><code>Export diagnostics (plain text)</code> copies the diagnostics text to your clipboard</li>
+                        <li><code>Download diagnostics file</code> creates a plain-text file and opens the native share sheet</li>
+                        <li>nothing is sent in the background</li>
+                    </ul>
+                </div>
+
+                <p class="text-gray-900">The short version: no analytics, no automatic telemetry, no automatic crash reporting, and optional local diagnostics only. If support reads a bug report, it is because you deliberately sent it.</p>
             </div>
         </div>
 
         <div class="site-shell site-stack site-divider">
             <h3 class="text-gray-900">Related help</h3>
             <div class="site-link-grid site-link-grid--two">
-                <a href="/help/gmail-permission" class="site-link-item">
-                    <h4 class="text-gray-900">How Scrappy Kin uses Gmail permission</h4>
-                    <p class="text-gray-600">What Gmail access is used for, and what it does not allow.</p>
-                    <span class="site-link-meta">Read more -&gt;</span>
-                </a>
                 <a href="/help/how-scrappy-kin-handles-your-data" class="site-link-item">
                     <h4 class="text-gray-900">How Scrappy Kin handles your data</h4>
                     <p class="text-gray-600">What stays on your device, what stays in your email account, and what never reaches our servers.</p>
+                    <span class="site-link-meta">Read more -&gt;</span>
+                </a>
+                <a href="/help/gmail-permission" class="site-link-item">
+                    <h4 class="text-gray-900">How Scrappy Kin uses Gmail permission</h4>
+                    <p class="text-gray-600">What Gmail access is used for, and what it does not allow.</p>
                     <span class="site-link-meta">Read more -&gt;</span>
                 </a>
             </div>

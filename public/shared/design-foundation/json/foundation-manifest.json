@@ -1,0 +1,29 @@
+{
+  "name": "scrappy-kin-design-foundation",
+  "phase": "brand-refresh",
+  "generatedAt": "2026-03-31T23:51:55.821Z",
+  "contract": "brand-primitives-assets-typography-and-narrow-guidance",
+  "sourceFiles": [
+    "src/tokens/foundation.tokens.json",
+    "src/typography/foundation.typography.json",
+    "src/assets/README.md",
+    "src/docs/cross-product-guidance.md",
+    "src/docs/ios-deferred-adoption.md"
+  ],
+  "outputs": [
+    "dist/css/tokens.css",
+    "dist/css/typography.css",
+    "dist/json/tokens.json",
+    "dist/json/typography.json",
+    "dist/json/foundation-manifest.json",
+    "dist/assets/"
+  ],
+  "excludedFromSharedFoundation": [
+    "framework-specific components",
+    "mobile navigation patterns",
+    "website layouts",
+    "product-flow patterns",
+    "framework-specific typography implementation",
+    "screen composition primitives"
+  ]
+}

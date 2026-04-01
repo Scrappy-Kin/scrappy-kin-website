@@ -4,126 +4,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrappy Kin - Taking back privacy, together</title>
-    <meta name="description" content="Turn privacy rights into a habit. Two minutes a day. Opt out of data brokers without handing your personal data over to us.">
+    <meta name="description" content="Opt out of data brokers without handing your personal data over to us.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="/shared/design-foundation/assets/logo/scrappy-kin-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Londrina+Solid:wght@400&family=Martian+Mono:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=20260401-5">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-pink': '#ff006e',
-                        'brand-pink-light': '#ffb3d9',
+                        'brand-pink': 'var(--brand-pink)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-black': 'var(--brand-black)',
                     },
                     fontFamily: {
-                        'mono': ['Space Mono', 'monospace'],
-                        'sans': ['Inter', 'sans-serif'],
+                        'display': ['Londrina Solid', 'cursive'],
+                        'mono': ['Martian Mono', 'monospace'],
+                        'ui': ['Bricolage Grotesque', 'sans-serif'],
+                        'sans': ['Martian Mono', 'monospace'],
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="bg-white font-sans">
-    <!-- Header -->
-    <header class="border-b border-gray-200 py-6">
-        <div class="max-w-7xl mx-auto px-8 lg:px-32">
-            <div class="flex items-center gap-3">
-                <img src="/images/scrappy-kin.svg" alt="Scrappy Kin Logo" class="h-12 w-auto">
-                <h1 class="text-2xl font-mono text-brand-pink">Scrappy Kin</h1>
-            </div>
-        </div>
-    </header>
-
+<body class="brand-site brand-home bg-white font-sans">
     <!-- Hero Section -->
-    <section class="py-20">
-        <div class="max-w-5xl mx-auto px-8 text-center">
+    <section class="site-section site-section--hero">
+        <div class="site-shell site-shell--reading site-stack site-stack--tight text-center">
             <div class="mb-8 flex justify-center">
-                <img src="/images/scrappy-kin.svg" alt="Scrappy Kin" class="w-32 h-auto">
+                <img src="/shared/design-foundation/assets/logo/scrappy-kin-lockup.png" alt="Scrappy Kin" class="hero-lockup">
             </div>
-            <h2 class="text-5xl font-mono text-gray-900 mb-2">taking back privacy, together</h2>
-            <p class="text-2xl text-brand-pink font-mono mb-6">Turn privacy rights into a habit. Two minutes a day.</p>
-            <p class="text-xl text-gray-600 mb-4 max-w-3xl mx-auto leading-relaxed">
-                Do it without ever handing your personal data over to us.
+            <h1 class="hero-title text-gray-900">Taking Back Privacy, Together</h1>
+            <p class="hero-copy text-gray-600">
+                Send email opt-outs to data brokers. And do it without ever handing your personal data over to one more intermediary (us).
             </p>
-            <p class="text-lg font-mono text-gray-900">Beta on the App Store in April 2026.</p>
+            <p class="hero-eyebrow">
+                <span class="hero-eyebrow-glyph" aria-hidden="true">✦</span>
+                <span>
+                    Coming Soon to<br class="hero-eyebrow-break"> the <span class="hero-eyebrow-exception">i</span>OS App Store
+                </span>
+                <span class="hero-eyebrow-glyph" aria-hidden="true">✦</span>
+            </p>
         </div>
     </section>
 
     <!-- Why Scrappy Kin Section -->
-    <section class="bg-white py-20">
-        <div class="max-w-7xl mx-auto px-8 lg:px-32">
-            <h2 class="text-4xl font-mono text-gray-900 text-center mb-8">Why Scrappy Kin exists</h2>
-            <div class="max-w-4xl mx-auto text-gray-600 text-lg leading-relaxed space-y-6">
+    <section class="site-section bg-white">
+        <div class="site-shell site-stack">
+            <h2 class="section-title text-gray-900">Why Scrappy Kin exists</h2>
+            <div class="site-reading site-flow text-gray-600">
                 <p>
                     Data brokers are companies that collect, package, and sell personal information about people — often without their knowledge or consent.
                 </p>
                 <p>
-                    Most people technically have the right to opt out of these databases. But the process is scattered across hundreds of sites and forms, which means most people never do it.
+                    Most people have the legal right to opt out of these databases. But in practice, the process is scattered across hundreds of sites and forms, which makes it hard to do on your own. Services exist to handle this for you, but they require you to trust yet another intermediary with your personal information.
                 </p>
                 <p class="text-gray-900 font-medium">
-                    Scrappy Kin exists to change that.
-                </p>
-                <p>
-                    Instead of asking you to upload the exact personal data you’re trying to protect, Scrappy Kin helps you exercise your privacy rights yourself while keeping your personal information out of our hands.
+                    Scrappy Kin exists to put you back in control and make opt-outs something busy people can actually do.
                 </p>
             </div>
         </div>
     </section>
 
     <!-- How It Works Section -->
-    <section class="bg-white py-20">
-        <div class="max-w-7xl mx-auto px-8 lg:px-32">
-            <h2 class="text-4xl font-mono text-gray-900 text-center mb-16">How it works</h2>
-            <div class="space-y-6 max-w-4xl mx-auto">
-                <!-- Step 1 -->
-                <div class="flex items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 bg-brand-pink text-white rounded-full flex items-center justify-center font-mono font-bold text-lg">1</div>
-                    <div>
-                        <h3 class="text-lg font-mono text-gray-900 mb-2">We show you where to act</h3>
-                        <p class="text-gray-600">Data broker opt-outs are spread across hundreds of companies.</p>
-                        <p class="text-gray-600 mt-2">Scrappy Kin helps surface the right links, forms, and next steps so you don’t have to hunt them down yourself.</p>
+    <section class="site-section bg-white">
+        <div class="site-shell site-stack">
+            <h2 class="section-title text-gray-900">How it works</h2>
+            <div class="site-steps">
+                <div class="step-row">
+                    <div class="step-text-row">
+                        <div class="step-number">1</div>
+                        <div class="step-copy site-flow--compact">
+                            <h3 class="step-title text-gray-900">Choose the brokers you want to contact</h3>
+                            <p class="text-gray-600">Scrappy Kin has audited more than 800 brokers to figure out which ones honor opt-out requests and the easiest way to submit them.</p>
+                            <p class="step-proof text-gray-900">Start with a curated broker list instead of hunting down forms from scratch.</p>
+                        </div>
+                    </div>
+                    <div class="step-shot">
+                        <img src="/images/app-flow/step-1.png" alt="Scrappy Kin broker selection screen showing selected brokers and available brokers to contact." class="step-image">
                     </div>
                 </div>
 
-                <!-- Step 2 -->
-                <div class="flex items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 bg-brand-pink text-white rounded-full flex items-center justify-center font-mono font-bold text-lg">2</div>
-                    <div>
-                        <h3 class="text-lg font-mono text-gray-900 mb-2">The app helps with the tedious parts</h3>
-                        <p class="text-gray-600">It can generate requests, track what you’ve done, and keep everything organized.</p>
-                        <p class="text-gray-600 mt-2">The goal is to make privacy something you can actually keep up with, even on a busy day.</p>
+                <div class="step-row">
+                    <div class="step-text-row">
+                        <div class="step-number">2</div>
+                        <div class="step-copy site-flow--compact">
+                            <h3 class="step-title text-gray-900">Review the next batch before it sends</h3>
+                            <p class="text-gray-600">You can review the broker list, confirm Gmail is connected, and check the email before anything goes out.</p>
+                            <p class="step-proof text-gray-900">The send stays in your hands, with the details visible before you act.</p>
+                        </div>
+                    </div>
+                    <div class="step-shot">
+                        <img src="/images/app-flow/step-3.png" alt="Scrappy Kin review next batch screen showing Gmail connected status, selected brokers, and an email preview before sending." class="step-image">
                     </div>
                 </div>
 
-                <!-- Step 3 -->
-                <div class="flex items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 bg-brand-pink text-white rounded-full flex items-center justify-center font-mono font-bold text-lg">3</div>
-                    <div>
-                        <h3 class="text-lg font-mono text-gray-900 mb-2">You send the requests</h3>
-                        <p class="text-gray-600">You stay in control of the final action.</p>
-                        <p class="text-gray-600 mt-2">Requests go directly from you to the broker, and responses come back to you.</p>
+                <div class="step-row">
+                    <div class="step-text-row">
+                        <div class="step-number">3</div>
+                        <div class="step-copy site-flow--compact">
+                            <h3 class="step-title text-gray-900">Send from your own account and track progress</h3>
+                            <p class="text-gray-600">The email goes out from your connected Gmail account, and Scrappy Kin keeps track of what was sent and what is next.</p>
+                            <p class="step-proof text-gray-900">Replies come back to your inbox, and your next round is ready when you are.</p>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="flex items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 bg-brand-pink text-white rounded-full flex items-center justify-center font-mono font-bold text-lg">4</div>
-                    <div>
-                        <h3 class="text-lg font-mono text-gray-900 mb-2">We never ask you to hand us your personal data</h3>
-                        <p class="text-gray-600">Scrappy Kin is built around a simple idea: exercising your privacy rights should not require trusting another company with your personal data.</p>
-                        <p class="text-gray-600 mt-2">We don’t ask you to hand over your identity documents, addresses, or other personal details for us to store and manage.</p>
-                    </div>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="flex items-start gap-6">
-                    <div class="flex-shrink-0 w-12 h-12 bg-brand-pink text-white rounded-full flex items-center justify-center font-mono font-bold text-lg">5</div>
-                    <div>
-                        <h3 class="text-lg font-mono text-gray-900 mb-2">You send the opt-out requests from your own email account.</h3>
-                        <p class="text-gray-600">Scrappy Kin cannot read your inbox or store Gmail data. That’s by design.</p>
+                    <div class="step-shot">
+                        <img src="/images/app-flow/step-2.png" alt="Scrappy Kin progress screen showing opt-out emails sent and the next batch available to review." class="step-image">
                     </div>
                 </div>
             </div>
@@ -131,146 +121,100 @@
     </section>
 
     <!-- What You Gain Section -->
-    <section class="bg-white py-20">
-        <div class="max-w-7xl mx-auto px-8 lg:px-32">
-            <h2 class="text-4xl font-mono text-gray-900 text-center mb-16">What you get</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <section class="site-section bg-white">
+        <div class="site-shell site-stack">
+            <h2 class="section-title text-gray-900">What you get</h2>
+            <div class="site-card-grid site-card-grid--two">
                 <!-- Card 1 -->
-                <div class="border-2 border-gray-200 rounded-lg p-6">
-                    <div class="mb-4">
+                <div class="site-card">
+                    <div class="site-card-icon">
                         <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-mono text-gray-900 mb-2">Privacy that fits into a busy day</h3>
-                    <p class="text-gray-600 text-sm">Two minutes a day to exercise your privacy rights, without needing to become a privacy expert.</p>
+                    <h3 class="text-gray-900">A simpler way to follow through</h3>
+                    <p class="text-gray-600">Make opt-outs something you can actually keep up with.</p>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="border-2 border-gray-200 rounded-lg p-6">
-                    <div class="mb-4">
+                <div class="site-card">
+                    <div class="site-card-icon">
                         <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-mono text-gray-900 mb-2">Control without blind trust</h3>
-                    <p class="text-gray-600 text-sm">You don’t have to hand sensitive personal information to another company and hope they handle it well.</p>
+                    <h3 class="text-gray-900">More control over your data</h3>
+                    <p class="text-gray-600">You do not have to hand sensitive personal information to another service just to get started.</p>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="border-2 border-gray-200 rounded-lg p-6">
-                    <div class="mb-4">
+                <div class="site-card">
+                    <div class="site-card-icon">
                         <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-mono text-gray-900 mb-2">Clear proof of what happened</h3>
-                    <p class="text-gray-600 text-sm">Because you send the requests yourself, you know exactly what was submitted and what came back.</p>
+                    <h3 class="text-gray-900">No hidden tracking</h3>
+                    <p class="text-gray-600">The app has no analytics, automatic telemetry, or crash reporting. Optional diagnostics stay on your device unless you choose to export them.</p>
                 </div>
 
                 <!-- Card 4 -->
-                <div class="border-2 border-gray-200 rounded-lg p-6">
-                    <div class="mb-4">
+                <div class="site-card">
+                    <div class="site-card-icon">
                         <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"></path>
                         </svg>
                     </div>
-                    <h3 class="text-lg font-mono text-gray-900 mb-2">Open-source transparency</h3>
-                    <p class="text-gray-600 text-sm">The code is public so the system can be inspected, questioned, and improved in the open.</p>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="border-2 border-gray-200 rounded-lg p-6">
-                    <div class="mb-4">
-                        <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-mono text-gray-900 mb-2">Privacy rights in practice</h3>
-                    <p class="text-gray-600 text-sm">Scrappy Kin helps turn laws like GDPR and CCPA from abstract rights into actions people can actually take.</p>
-                </div>
-
-                <!-- Card 6 -->
-                <div class="border-2 border-gray-200 rounded-lg p-6">
-                    <div class="mb-4">
-                        <svg class="w-6 h-6 text-brand-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-mono text-gray-900 mb-2">Privacy improves when more people exercise their rights.</h3>
-                    <p class="text-gray-600 text-sm">Scrappy Kin is focused on helping you exercise your own privacy rights with more clarity and control.</p>
+                    <h3 class="text-gray-900">Open-source and auditable</h3>
+                    <p class="text-gray-600">The code can be inspected, questioned, and improved in the open.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="border-t border-gray-200 py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-8 lg:px-32">
-            <div class="mb-8">
-                <h3 class="text-2xl font-mono text-gray-900 mb-4">About Scrappy Kin</h3>
-                <p class="text-gray-600 max-w-3xl">
-                    Scrappy Kin is built by privacy advocates who believe privacy is a fundamental human right, and that exercising that right should not require money, expertise, or blind trust in another company.
+    <footer class="site-footer bg-white">
+        <div class="site-shell site-stack site-stack--loose">
+            <div class="site-reading site-flow">
+                <h2 class="section-title text-gray-900">Frequently Asked Questions</h2>
+                <p class="text-gray-600">
+                    Questions about billing, Gmail permission, local data handling, and how messages are sent.
                 </p>
-                <p class="text-gray-600 max-w-3xl mt-4">
-                    The goal isn’t a magic privacy service.
+                <p class="text-gray-600">
+                    Billing goes through the App Store. As much as possible, your data stays on your device or in your own email account.
                 </p>
-                <p class="text-gray-600 max-w-3xl mt-4">
-                    The goal is a simple tool that helps anyone exercise their privacy rights while shining light on how the data broker ecosystem actually behaves.
-                </p>
-            </div>
-            
-            <div class="mb-8 border-t border-gray-200 pt-8">
-                <h4 class="text-lg font-mono text-gray-900 mb-3">Help</h4>
-                <p class="text-gray-600 max-w-3xl">
-                    You send the opt-out requests from your own email account.
-                </p>
-                <p class="text-gray-600 max-w-3xl mt-2">
-                    Scrappy Kin cannot read your inbox or store Gmail data. That’s by design.
+                <p class="text-gray-600">
+                    The app has no analytics or automatic crash reporting. Optional diagnostics stay local unless you choose to export them. The code is open source if you want to inspect it yourself.
                 </p>
             </div>
 
-            <div class="mb-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl">
-                    <a href="/help/gmail-permission" class="border-2 border-gray-200 rounded-lg p-6 block hover:border-brand-pink transition-colors">
-                        <h4 class="text-lg font-mono text-gray-900 mb-2">How Scrappy Kin uses Gmail permission</h4>
-                        <p class="text-gray-600 text-sm">A plain-language explanation of why Gmail permission is needed and what it does not allow.</p>
+            <div class="site-link-grid site-link-grid--two">
+                    <a href="/help/gmail-permission" class="site-link-item">
+                        <h4 class="text-gray-900">How Scrappy Kin uses Gmail permission</h4>
+                        <p class="text-gray-600">What Gmail access is used for, and what it does not allow.</p>
+                        <span class="site-link-meta">Read more -&gt;</span>
                     </a>
-                    <a href="/help/how-scrappy-kin-handles-your-data" class="border-2 border-gray-200 rounded-lg p-6 block hover:border-brand-pink transition-colors">
-                        <h4 class="text-lg font-mono text-gray-900 mb-2">How Scrappy Kin handles your data</h4>
-                        <p class="text-gray-600 text-sm">A short overview of how Scrappy Kin minimizes trust and keeps your personal data off its servers.</p>
+                    <a href="/help/how-scrappy-kin-handles-your-data" class="site-link-item">
+                        <h4 class="text-gray-900">How Scrappy Kin handles your data</h4>
+                        <p class="text-gray-600">What stays on your device, what stays in your email account, and what never reaches our servers.</p>
+                        <span class="site-link-meta">Read more -&gt;</span>
                     </a>
-                    <a href="/help/how-opt-out-emails-are-sent" class="border-2 border-gray-200 rounded-lg p-6 block hover:border-brand-pink transition-colors">
-                        <h4 class="text-lg font-mono text-gray-900 mb-2">How opt-out emails are sent</h4>
-                        <p class="text-gray-600 text-sm">A step-by-step explanation of how broker opt-out emails are prepared, reviewed, and sent from your own account.</p>
+                    <a href="/help/how-opt-out-emails-are-sent" class="site-link-item">
+                        <h4 class="text-gray-900">How opt-out emails are sent</h4>
+                        <p class="text-gray-600">How requests are prepared, reviewed, and sent from your own account.</p>
+                        <span class="site-link-meta">Read more -&gt;</span>
                     </a>
-                </div>
+                    <a href="/help/analytics-diagnostics-and-bug-reports" class="site-link-item">
+                        <h4 class="text-gray-900">Analytics, diagnostics, and bug reports</h4>
+                        <p class="text-gray-600">What the app does not track, what optional diagnostics exist, and what only gets shared if you send it.</p>
+                        <span class="site-link-meta">Read more -&gt;</span>
+                    </a>
             </div>
             
-            <div class="border-t border-gray-200 pt-8 flex flex-wrap items-center gap-2 text-sm text-gray-500">
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    <span>Local-first</span>
-                </div>
+            <div class="brand-meta site-divider site-meta-row text-sm text-gray-500">
+                <a href="/privacy.html">Privacy Policy</a>
                 <span>•</span>
-                <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                    </svg>
-                    <span>No server-side personal data</span>
-                </div>
-                <span>•</span>
-                <span>Open source</span>
-                <span>•</span>
-                <span>GDPR &amp; CCPA aware</span>
-                <span>•</span>
-                <span>Two-minute privacy habit</span>
-            </div>
-
-            <div class="mt-8 text-center">
-                <p class="text-sm font-mono text-brand-pink">&lt;/scrappy_kin&gt;</p>
+                <a href="/tos.html">Terms of Service</a>
             </div>
         </div>
     </footer>

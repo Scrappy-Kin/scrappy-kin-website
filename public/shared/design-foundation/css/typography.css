@@ -1,0 +1,13 @@
+:root {
+  --font-role-display: "Londrina Solid", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  --font-role-body: "Martian Mono", 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+  --font-role-ui: "Bricolage Grotesque", 'Avenir Next', 'Segoe UI', sans-serif;
+  --font-weight-display: 400;
+  --font-weight-body-regular: 200;
+  --font-weight-body-strong: 600;
+  --font-weight-ui: 400;
+  --button-primary-background: var(--primary);
+  --button-primary-foreground: var(--primary-contrast);
+  --button-primary-radius: var(--radius-round);
+  --button-primary-text-transform: uppercase;
+}

@@ -1,0 +1,66 @@
+{
+  "metadata": {
+    "phase": "brand-refresh",
+    "loadingContract": "consumer-local"
+  },
+  "roles": {
+    "display": {
+      "family": "Londrina Solid",
+      "fallback": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif",
+      "usage": "display titles and hero headings"
+    },
+    "body": {
+      "family": "Martian Mono",
+      "fallback": "'SFMono-Regular', Consolas, 'Liberation Mono', monospace",
+      "usage": "body copy and primary button labels"
+    },
+    "ui": {
+      "family": "Bricolage Grotesque",
+      "fallback": "'Avenir Next', 'Segoe UI', sans-serif",
+      "usage": "ui chrome and microcopy"
+    }
+  },
+  "web": {
+    "googleFonts": {
+      "families": [
+        {
+          "name": "Londrina Solid",
+          "weights": [
+            400
+          ]
+        },
+        {
+          "name": "Martian Mono",
+          "weights": [
+            200,
+            600
+          ]
+        },
+        {
+          "name": "Bricolage Grotesque",
+          "weights": [
+            400,
+            700
+          ]
+        }
+      ]
+    },
+    "recommendedSubsets": [
+      "latin"
+    ],
+    "guidance": [
+      "Load fonts through the local consumer adapter, not directly from shared CSS.",
+      "Do not load additional weights or italic styles unless a concrete consumer need exists.",
+      "Prefer a single Google Fonts request covering only the approved families and weights."
+    ]
+  },
+  "button": {
+    "primary": {
+      "background": "var(--primary)",
+      "foreground": "var(--primary-contrast)",
+      "radius": "var(--radius-round)",
+      "labelRole": "body",
+      "textTransform": "uppercase"
+    }
+  }
+}

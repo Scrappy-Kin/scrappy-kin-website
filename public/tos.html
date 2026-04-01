@@ -5,15 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - Scrappy Kin</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="image/png" href="/shared/design-foundation/assets/logo/scrappy-kin-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Londrina+Solid:wght@400&family=Martian+Mono:wght@200;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css?v=20260401-5">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-pink': 'var(--brand-pink)',
+                        'brand-dark': 'var(--brand-dark)',
+                        'brand-black': 'var(--brand-black)',
+                    },
+                    fontFamily: {
+                        'display': ['Londrina Solid', 'cursive'],
+                        'mono': ['Martian Mono', 'monospace'],
+                        'ui': ['Bricolage Grotesque', 'sans-serif'],
+                        'sans': ['Martian Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-gray-50">
+<body class="brand-site brand-legal bg-gray-50">
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+    <nav class="site-nav bg-white shadow-sm">
+        <div class="site-shell">
+            <div class="site-nav-row">
                 <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-gray-900">Scrappy Kin</a>
+                    <a href="/" class="site-logo-link text-2xl font-bold text-gray-900">
+                        <img src="/shared/design-foundation/assets/logo/scrappy-kin-mark.png" alt="Scrappy Kin Logo" class="h-10 w-auto">
+                        <span class="site-wordmark">Scrappy Kin</span>
+                    </a>
                 </div>
                 <div class="flex items-center space-x-8">
                     <a href="/tos.html" class="text-gray-900 font-semibold">Terms of Service</a>
@@ -24,7 +50,7 @@
     </nav>
 
     <!-- Content -->
-    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main class="site-shell site-shell--article site-article-shell site-section">
         <h1 class="text-4xl font-bold text-gray-900 mb-8">Scrappy Kin Terms of Service</h1>
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
             <p><strong>Effective date:</strong> March 16, 2026</p>
@@ -100,8 +126,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <footer class="site-footer bg-white border-t border-gray-200 mt-20">
+        <div class="site-shell">
             <div class="flex justify-between items-center">
                 <p class="text-gray-600">&copy; 2025 Scrappy Kin. All rights reserved.</p>
                 <div class="flex space-x-6">
