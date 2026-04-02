@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Londrina+Solid:wght@400&family=Martian+Mono:wght@200;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260401-5">
+    <link rel="stylesheet" href="/css/style.css?v=20260402-2">
     <script>
         tailwind.config = {
             theme: {
@@ -37,11 +37,10 @@
             <div class="site-nav-row">
                 <div class="flex items-center">
                     <a href="/" class="site-logo-link text-2xl font-bold text-gray-900">
-                        <img src="/shared/design-foundation/assets/logo/scrappy-kin-mark.png" alt="Scrappy Kin Logo" class="h-10 w-auto">
-                        <span class="site-wordmark">Scrappy Kin</span>
+                        <img src="/shared/design-foundation/assets/logo/scrappy-kin-nav-mark.png" alt="Scrappy Kin Logo" class="site-logo-mark">
                     </a>
                 </div>
-                <div class="flex items-center space-x-8">
+                <div class="site-nav-links">
                     <a href="/tos.html" class="text-gray-600 hover:text-gray-900 transition">Terms of Service</a>
                     <a href="/privacy.html" class="text-gray-600 hover:text-gray-900 transition">Privacy Policy</a>
                 </div>
@@ -64,18 +63,16 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer bg-white border-t border-gray-200 mt-20">
+    <footer class="site-footer border-t border-gray-200 py-16 bg-white">
         <div class="site-shell">
-            <div class="flex justify-between items-center">
-                <p class="text-gray-600">&copy; 2025 Scrappy Kin. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="/tos.html" class="text-gray-600 hover:text-gray-900 transition">Terms</a>
-                    <a href="/privacy.html" class="text-gray-600 hover:text-gray-900 transition">Privacy</a>
-                </div>
+            <div class="brand-meta site-meta-row text-sm text-gray-500">
+                <a href="/help/">Help</a>
+                <span>•</span>
+                <a href="/privacy.html">Privacy Policy</a>
+                <span>•</span>
+                <a href="/tos.html">Terms of Service</a>
             </div>
         </div>
     </footer>
-
-    <script src="/js/main.js"></script>
 </body>
 </html>

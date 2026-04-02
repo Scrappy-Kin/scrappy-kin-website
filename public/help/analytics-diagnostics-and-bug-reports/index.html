@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Londrina+Solid:wght@400&family=Martian+Mono:wght@200;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260401-5">
+    <link rel="stylesheet" href="/css/style.css?v=20260402-2">
     <script>
         tailwind.config = {
             theme: {
@@ -31,16 +31,19 @@
     </script>
 </head>
 <body class="brand-site brand-help bg-white font-sans">
-    <header class="site-header border-b border-gray-200 py-6">
+    <nav class="site-nav bg-white shadow-sm">
         <div class="site-shell">
-            <div class="site-header-row">
+            <div class="site-nav-row">
                 <a href="/" class="site-logo-link">
-                    <img src="/shared/design-foundation/assets/logo/scrappy-kin-mark.png" alt="Scrappy Kin Logo" class="h-12 w-auto">
-                    <span class="site-wordmark text-brand-pink">Scrappy Kin</span>
+                    <img src="/shared/design-foundation/assets/logo/scrappy-kin-nav-mark.png" alt="Scrappy Kin Logo" class="site-logo-mark">
                 </a>
+                <div class="site-nav-links">
+                    <a href="/privacy.html" class="text-gray-600 hover:text-gray-900 transition">Privacy Policy</a>
+                    <a href="/tos.html" class="text-gray-600 hover:text-gray-900 transition">Terms of Service</a>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
     <main class="site-section">
         <div class="site-shell site-shell--reading site-stack">
@@ -77,7 +80,7 @@
                     </ul>
                 </div>
 
-                <p class="text-gray-900">The short version: no analytics, no automatic telemetry, no automatic crash reporting, and optional local diagnostics only. If support reads a bug report, it is because you deliberately sent it.</p>
+                <p class="text-gray-900">The short version: no analytics, no automatic telemetry, and no automatic crash reporting. If support reads a bug report or diagnostics, it is because you deliberately exported and sent them.</p>
             </div>
         </div>
 
@@ -101,6 +104,8 @@
     <footer class="site-footer border-t border-gray-200 py-16 bg-white">
         <div class="site-shell">
             <div class="brand-meta site-meta-row text-sm text-gray-500">
+                <a href="/help/">Help</a>
+                <span>•</span>
                 <a href="/privacy.html">Privacy Policy</a>
                 <span>•</span>
                 <a href="/tos.html">Terms of Service</a>

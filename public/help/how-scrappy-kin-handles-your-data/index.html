@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Londrina+Solid:wght@400&family=Martian+Mono:wght@200;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260401-5">
+    <link rel="stylesheet" href="/css/style.css?v=20260402-2">
     <script>
         tailwind.config = {
             theme: {
@@ -31,16 +31,19 @@
     </script>
 </head>
 <body class="brand-site brand-help bg-white font-sans">
-    <header class="site-header border-b border-gray-200 py-6">
+    <nav class="site-nav bg-white shadow-sm">
         <div class="site-shell">
-            <div class="site-header-row">
+            <div class="site-nav-row">
                 <a href="/" class="site-logo-link">
-                    <img src="/shared/design-foundation/assets/logo/scrappy-kin-mark.png" alt="Scrappy Kin Logo" class="h-12 w-auto">
-                    <span class="site-wordmark text-brand-pink">Scrappy Kin</span>
+                    <img src="/shared/design-foundation/assets/logo/scrappy-kin-nav-mark.png" alt="Scrappy Kin Logo" class="site-logo-mark">
                 </a>
+                <div class="site-nav-links">
+                    <a href="/privacy.html" class="text-gray-600 hover:text-gray-900 transition">Privacy Policy</a>
+                    <a href="/tos.html" class="text-gray-600 hover:text-gray-900 transition">Terms of Service</a>
+                </div>
             </div>
         </div>
-    </header>
+    </nav>
 
     <main class="site-section">
         <div class="site-shell site-shell--reading site-stack">
@@ -63,13 +66,35 @@
                     <h3 class="text-gray-900 mb-4">Scrappy Kin does not:</h3>
                     <ul class="list-disc pl-6 space-y-2">
                         <li>read your inbox</li>
-                        <li>collect data in the background</li>
+                        <li>send data to us in the background</li>
                         <li>run analytics or telemetry inside the app</li>
                         <li>keep server-side copies of the personal data you are trying to remove</li>
                     </ul>
                 </div>
 
-                <p class="text-gray-900">Scrappy Kin is open source, so you do not have to take our word for it. If something breaks, you can email us directly and read the full error report yourself. If you disconnect Gmail inside Scrappy Kin or via <a href="https://myaccount.google.com/permissions" class="text-pink-600 underline">Google account settings</a>, the Gmail token stored on your device is deleted immediately.</p>
+                <p class="text-gray-900">Scrappy Kin is open source, so you do not have to take our word for it. If something breaks, you can email us directly and read the full error report yourself. If you disconnect Gmail inside Scrappy Kin or via <a href="https://myaccount.google.com/permissions" class="text-pink-600 underline">Google account settings</a>, the token stored on your device is deleted immediately.</p>
+
+                <div>
+                    <h3 class="text-gray-900 mb-4">Gmail tokens stay on your device</h3>
+                    <p>When you connect Gmail, Google issues a token that lets Scrappy Kin send on your behalf. That token:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-3">
+                        <li>is stored in your device's operating system secure storage (Keychain on iOS/macOS, Keystore on Android)</li>
+                        <li>is never synced to Scrappy Kin servers — we cannot act on your behalf without the copy on your device</li>
+                        <li>stays on a direct device-to-Google path: opt-out emails go from your device to Google via the Gmail API, not through our infrastructure</li>
+                        <li>is deleted immediately when you revoke access in-app or at <a href="https://myaccount.google.com/permissions" class="text-pink-600 underline">Google account settings</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-gray-900 mb-4">Diagnostics are optional and local</h3>
+                    <p>Scrappy Kin does not collect background usage data. Specifically:</p>
+                    <ul class="list-disc pl-6 space-y-2 mt-3">
+                        <li>no analytics SDKs, no third-party tracking tools, no automatic crash-reporting services are included in the app</li>
+                        <li>optional local diagnostics are off by default; you can turn them on in settings if you need to troubleshoot</li>
+                        <li>when enabled, diagnostic logs stay on your device and are only ever shared if you manually export and email them to us</li>
+                        <li>diagnostic logs record app state only — they are not a background pipeline and are not used to capture Gmail content</li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -93,6 +118,8 @@
     <footer class="site-footer border-t border-gray-200 py-16 bg-white">
         <div class="site-shell">
             <div class="brand-meta site-meta-row text-sm text-gray-500">
+                <a href="/help/">Help</a>
+                <span>•</span>
                 <a href="/privacy.html">Privacy Policy</a>
                 <span>•</span>
                 <a href="/tos.html">Terms of Service</a>

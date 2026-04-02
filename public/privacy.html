@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Londrina+Solid:wght@400&family=Martian+Mono:wght@200;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260401-5">
+    <link rel="stylesheet" href="/css/style.css?v=20260402-2">
     <script>
         tailwind.config = {
             theme: {
@@ -37,11 +37,10 @@
             <div class="site-nav-row">
                 <div class="flex items-center">
                     <a href="/" class="site-logo-link text-2xl font-bold text-gray-900">
-                        <img src="/shared/design-foundation/assets/logo/scrappy-kin-mark.png" alt="Scrappy Kin Logo" class="h-10 w-auto">
-                        <span class="site-wordmark">Scrappy Kin</span>
+                        <img src="/shared/design-foundation/assets/logo/scrappy-kin-nav-mark.png" alt="Scrappy Kin Logo" class="site-logo-mark">
                     </a>
                 </div>
-                <div class="flex items-center space-x-8">
+                <div class="site-nav-links">
                     <a href="/tos.html" class="text-gray-600 hover:text-gray-900 transition">Terms of Service</a>
                     <a href="/privacy.html" class="text-gray-900 font-semibold">Privacy Policy</a>
                 </div>
@@ -53,15 +52,29 @@
     <main class="site-shell site-shell--article site-article-shell site-section">
         <h1 class="text-4xl font-bold text-gray-900 mb-8">Scrappy Kin Privacy Policy</h1>
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p><strong>Effective date:</strong> March 16, 2026<br>
-            <strong>Applies to:</strong> Scrappy Kin mobile + desktop clients, connected Gmail sending flows, and related support touchpoints.</p>
+            <p class="mt-4"><strong>Effective date:</strong> March 16, 2026<br>
+            <strong>Applies to:</strong> Scrappy Kin mobile app, connected Gmail sending flows, and related support touchpoints.</p>
 
-            <p>This policy explains how Scrappy Kin handles personal data and Google user data for the current Gmail permission flow. It reflects Scrappy Kin's zero-trust design, <code>gmail.send</code>-only scope, and Google API Services User Data Policy commitments.</p>
+            <p>This policy explains how Scrappy Kin handles personal data and Google user data for the current Gmail permission flow. It reflects Scrappy Kin's zero-trust design, Google's <code>gmail.send</code> permission (send email only), and Google API Services User Data Policy commitments.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">1. Who we are</h2>
+            <div class="site-legal-toc">
+                <p class="site-legal-toc-title text-gray-900">On this page</p>
+                <div class="site-legal-toc-list">
+                    <a href="#who-we-are">Who we are</a>
+                    <a href="#data-we-access">Data we access</a>
+                    <a href="#data-we-do-not-access">Data we do not access</a>
+                    <a href="#google-user-data">How Gmail data flows</a>
+                    <a href="#token-cache-log-handling">Token, cache, and log handling</a>
+                    <a href="#limited-use-compliance">Limited Use compliance</a>
+                    <a href="#your-choices">Your choices</a>
+                    <a href="#contact-us">Contact us</a>
+                </div>
+            </div>
+
+            <h2 id="who-we-are" class="text-2xl font-semibold text-gray-900">1. Who we are</h2>
             <p>Scrappy Kin Inc. ("Scrappy Kin", "we", "us") is a Canadian company that builds tools letting people trigger verified opt-out requests without handing over inbox access.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">2. What this policy covers</h2>
+            <h2 id="what-this-policy-covers" class="text-2xl font-semibold text-gray-900">2. What this policy covers</h2>
             <ul class="list-disc pl-6">
                 <li>The Scrappy Kin consumer app and related reviewer materials</li>
                 <li>Our use of the Gmail API sensitive scope <code>gmail.send</code></li>
@@ -69,8 +82,8 @@
             </ul>
             <p>It does <strong>not</strong> cover future Gmail scopes, enterprise deployments, or non-Google integrations.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">3. Data we access</h2>
-            <div class="overflow-x-auto">
+            <h2 id="data-we-access" class="text-2xl font-semibold text-gray-900">3. Data we access</h2>
+            <div class="site-table-scroll">
                 <table class="w-full text-sm border border-gray-200">
                     <thead>
                         <tr class="bg-gray-100 text-left">
@@ -82,43 +95,43 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="p-3 border border-gray-200">Contact details you choose to provide (e.g., when you email support)</td>
-                            <td class="p-3 border border-gray-200">Collected directly from you</td>
-                            <td class="p-3 border border-gray-200">Support and privacy/compliance communication</td>
-                            <td class="p-3 border border-gray-200">Used only to respond to you, maintain support records, and meet legal obligations; never used for ads</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Contact details you choose to provide (e.g., when you email support)</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Collected directly from you</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Support and privacy/compliance communication</td>
+                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Used only to respond to you, maintain support records, and meet legal obligations; never used for ads</td>
                         </tr>
                         <tr>
-                            <td class="p-3 border border-gray-200">Gmail OAuth token</td>
-                            <td class="p-3 border border-gray-200">Granted by you through Google's consent screen</td>
-                            <td class="p-3 border border-gray-200">Allows Scrappy Kin to send opt-out emails that you initiate</td>
-                            <td class="p-3 border border-gray-200">Stored only on your device inside the operating system's secure storage; encrypted at rest; cleared automatically if you disconnect in-app or via Google Security settings</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Gmail OAuth token</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Granted by you through Google's consent screen</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Allows Scrappy Kin to send opt-out emails that you initiate</td>
+                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Stored only on your device inside the operating system's secure storage; encrypted at rest; cleared automatically if you disconnect in-app or via Google Security settings</td>
                         </tr>
                         <tr>
-                            <td class="p-3 border border-gray-200">Message drafts and recipients you type in Scrappy Kin</td>
-                            <td class="p-3 border border-gray-200">Entered by you when you submit a request</td>
-                            <td class="p-3 border border-gray-200">Used to create and send the exact email you approve</td>
-                            <td class="p-3 border border-gray-200">Lives only in local memory until the email is sent; not uploaded to Scrappy Kin servers</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Message drafts and recipients you type in Scrappy Kin</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Entered by you when you build and review a batch</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Used to create and send the batch of emails you review and approve</td>
+                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Persisted on your device only, not uploaded to Scrappy Kin servers; cleared after the batch is sent</td>
                         </tr>
                         <tr>
-                            <td class="p-3 border border-gray-200">Broker-response evidence you choose to attach</td>
-                            <td class="p-3 border border-gray-200">Optional upload from you</td>
-                            <td class="p-3 border border-gray-200">Lets you track outcomes and document broker behavior</td>
-                            <td class="p-3 border border-gray-200">Stored locally on your device; if you email us for help we only receive what you send</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Broker-response evidence you choose to attach</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Optional upload from you</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Lets you track outcomes and document broker behavior</td>
+                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Stored locally on your device; if you email us for help we only receive what you send</td>
                         </tr>
                         <tr>
-                            <td class="p-3 border border-gray-200">Support correspondence</td>
-                            <td class="p-3 border border-gray-200">Emails between you and Scrappy Kin</td>
-                            <td class="p-3 border border-gray-200">Troubleshooting and compliance follow-up</td>
-                            <td class="p-3 border border-gray-200">Stored in our support systems as reasonably needed to respond, comply with law, and protect the service</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Support correspondence</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Emails between you and Scrappy Kin</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Troubleshooting and compliance follow-up</td>
+                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Stored in our support systems as reasonably needed to respond, comply with law, and protect the service</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h2 class="text-2xl font-semibold text-gray-900">4. Data we do <span class="uppercase">not</span> access</h2>
+            <h2 id="data-we-do-not-access" class="text-2xl font-semibold text-gray-900">4. Data we do <span class="uppercase">not</span> access</h2>
             <ul class="list-disc pl-6">
                 <li>We do not read, index, or store your Gmail inbox, labels, or metadata.</li>
-                <li>We do not request or store restricted Gmail scopes (<code>gmail.readonly</code>, <code>gmail.modify</code>, <code>gmail.metadata</code>, <code>gmail.labels</code>).</li>
+                <li>We do not request or store broader Gmail scopes such as <code>gmail.readonly</code>, <code>gmail.modify</code>, <code>gmail.metadata</code>, or <code>gmail.labels</code>. In plain English, those are the kinds of permissions that would let an app read your email, inspect message metadata, or change mailbox state instead of just sending the email you approve.</li>
                 <li>We do not sell personal data or use Google data for advertising.</li>
                 <li>We do not run background services that send email without you typing and confirming the request.</li>
             </ul>
@@ -126,21 +139,23 @@
             <h2 id="google-user-data" class="text-2xl font-semibold text-gray-900">5. How Gmail data flows</h2>
             <ol class="list-decimal pl-6">
                 <li>You tap <strong>Connect Gmail</strong> and Google shows the OAuth consent screen.</li>
-                <li>We request only <code>gmail.send</code> so Scrappy Kin can deliver the message you just composed.</li>
-                <li>After you approve the scope, Scrappy Kin stores the token locally and immediately uses it to send the one opt-out email you triggered.</li>
+                <li>We request only <code>gmail.send</code> so Scrappy Kin can deliver the batch of opt-out emails you have reviewed and chosen to send.</li>
+                <li>After you approve the scope, Scrappy Kin stores the token locally on your device and uses it only when you approve and dispatch a batch.</li>
                 <li>No Gmail content is copied to Scrappy Kin servers. The message goes directly from your device to Google via the Gmail API.</li>
                 <li>When you revoke access in Scrappy Kin or at <a href="https://myaccount.google.com/permissions" class="text-pink-600">https://myaccount.google.com/permissions</a>, we delete the local token and cannot send on your behalf until you reconnect.</li>
             </ol>
 
-            <h2 class="text-2xl font-semibold text-gray-900">6. Token, cache, and log handling</h2>
+            <h2 id="token-cache-log-handling" class="text-2xl font-semibold text-gray-900">6. Token, cache, and log handling</h2>
             <ul class="list-disc pl-6">
                 <li>Tokens live only in OS-provided secure storage (Keychain on iOS/macOS, Keystore on Android, system credential vault on desktop).</li>
                 <li>Scrappy Kin apps do not sync Gmail tokens to our servers, and we cannot act on your behalf without the copy on your device.</li>
                 <li>Local caches (recent brokers, drafts) remain on your device so you can review your activity without pinging our infrastructure.</li>
-                <li>Crash or diagnostic logs are opt-in, scrubbed of personal email content, and never sent automatically.</li>
+                <li>Scrappy Kin uses no analytics SDKs, no third-party tracking tools, and no automatic crash-reporting services.</li>
+                <li>Optional local diagnostics are off by default; if you turn them on, logs stay on your device and are only shared if you manually export and send them to us.</li>
+                <li>Narrow troubleshooting logs, when enabled, record app state only — not a background pipeline, not used to capture Gmail content.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-900">7. Limited Use compliance</h2>
+            <h2 id="limited-use-compliance" class="text-2xl font-semibold text-gray-900">7. Limited Use compliance</h2>
             <p>Scrappy Kin complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" class="text-pink-600">Google API Services User Data Policy, including the Limited Use requirements</a>. Specifically:</p>
             <ul class="list-disc pl-6">
                 <li>Gmail data is used only to send the opt-out emails you initiate and to show you a local record of the attempt.</li>
@@ -149,33 +164,33 @@
                 <li>Human access to Google user data occurs only when you explicitly share details with Scrappy Kin support.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-900">8. How we share data</h2>
+            <h2 id="how-we-share-data" class="text-2xl font-semibold text-gray-900">8. How we share data</h2>
             <p>We only share Gmail data in these cases:</p>
             <ul class="list-disc pl-6">
                 <li>With Google, solely to send the email you approved via the Gmail API</li>
                 <li>With the recipient you selected (usually a data broker or privacy contact) as part of that email</li>
                 <li>With regulators or law enforcement if we are legally required to do so, after verifying the request and notifying you when legally allowed</li>
             </ul>
+            <p>Because Scrappy Kin is designed to keep Gmail content, tokens, and opt-out data on your device, we generally do not hold the underlying personal information you are sending to brokers. If we receive a legal request, the main user-specific information we may actually have is whatever you directly sent us through support or privacy correspondence.</p>
             <p>We do not sell personal data or license Gmail data to partners.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">9. Security posture</h2>
+            <h2 id="security-posture" class="text-2xl font-semibold text-gray-900">9. Security posture</h2>
             <p>Scrappy Kin follows a zero-trust model: assume infrastructure fails, minimize the blast radius, and keep sensitive data on the user's device whenever possible. We design the product so we do not possess Gmail content that could be compelled from us; if our servers are compromised, attackers still cannot read your Gmail.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">10. Your choices</h2>
+            <h2 id="your-choices" class="text-2xl font-semibold text-gray-900">10. Your choices</h2>
             <ul class="list-disc pl-6">
                 <li>Disconnect Gmail any time at <a href="https://myaccount.google.com/permissions" class="text-pink-600">https://myaccount.google.com/permissions</a> or inside Scrappy Kin's settings</li>
                 <li>Ask privacy questions or request deletion of support correspondence by contacting <a href="mailto:privacy@scrappykin.com" class="text-pink-600">privacy@scrappykin.com</a></li>
-                <li>Request confirmation that Gmail access has been disconnected by contacting <a href="mailto:privacy@scrappykin.com" class="text-pink-600">privacy@scrappykin.com</a></li>
                 <li>Opt out of optional diagnostics entirely</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-900">11. Children's data</h2>
+            <h2 id="childrens-data" class="text-2xl font-semibold text-gray-900">11. Children's data</h2>
             <p>Scrappy Kin is not directed to children under 13 (or the minimum age in your jurisdiction). We do not knowingly collect data from children and will delete it if we discover we have done so.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">12. Changes to this policy</h2>
+            <h2 id="changes-to-this-policy" class="text-2xl font-semibold text-gray-900">12. Changes to this policy</h2>
             <p>We will post future updates at scrappykin.com/privacy.html with a clear effective date and summarize material changes in-product. We will also update the reviewer packet shared with Google.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">13. Contact us</h2>
+            <h2 id="contact-us" class="text-2xl font-semibold text-gray-900">13. Contact us</h2>
             <ul class="list-disc pl-6">
                 <li><strong>Privacy &amp; compliance:</strong> <a href="mailto:privacy@scrappykin.com" class="text-pink-600">privacy@scrappykin.com</a></li>
                 <li><strong>Support:</strong> <a href="mailto:support@scrappykin.com" class="text-pink-600">support@scrappykin.com</a></li>
@@ -184,18 +199,17 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer bg-white border-t border-gray-200 mt-20">
+    <footer class="site-footer border-t border-gray-200 py-16 bg-white">
         <div class="site-shell">
-            <div class="flex justify-between items-center">
-                <p class="text-gray-600">&copy; 2025 Scrappy Kin. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="/tos.html" class="text-gray-600 hover:text-gray-900 transition">Terms</a>
-                    <a href="/privacy.html" class="text-gray-900 font-semibold">Privacy</a>
-                </div>
+            <div class="brand-meta site-meta-row text-sm text-gray-500">
+                <a href="/help/">Help</a>
+                <span>•</span>
+                <a href="/privacy.html">Privacy Policy</a>
+                <span>•</span>
+                <a href="/tos.html">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <script src="/js/main.js"></script>
 </body>
 </html>

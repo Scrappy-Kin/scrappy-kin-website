@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How opt-out emails are sent - Scrappy Kin</title>
+    <title>Scrappy Kin Help</title>
+    <meta name="description" content="Opt out of data brokers without handing your personal data over to us.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/png" href="/shared/design-foundation/assets/logo/scrappy-kin-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,8 +31,8 @@
         }
     </script>
 </head>
-<body class="brand-site brand-help bg-white font-sans">
-    <nav class="site-nav bg-white shadow-sm">
+<body class="brand-site brand-home font-sans">
+    <nav class="site-nav shadow-sm">
         <div class="site-shell">
             <div class="site-nav-row">
                 <a href="/" class="site-logo-link">
@@ -46,40 +47,21 @@
     </nav>
 
     <main class="site-section">
-        <div class="site-shell site-shell--reading site-stack">
-            <a href="/" class="back-link inline-block text-sm text-brand-pink">&larr; Back to home</a>
-            <h1 class="text-4xl md:text-5xl text-gray-900">How opt-out emails are sent</h1>
-            <div class="site-flow text-gray-600">
-                <p>Scrappy Kin helps you send broker opt-out requests by email from your own Gmail account. You select a batch of brokers to target, review the request template, and approve the send — nothing goes out without your explicit action.</p>
-
-                <div>
-                    <h3 class="text-gray-900 mb-4">The flow works like this:</h3>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>Scrappy Kin shows you a list of brokers to act on</li>
-                        <li>you select the batch you want to address</li>
-                        <li>Scrappy Kin prepares the opt-out requests for review</li>
-                        <li>you review the batch and approve the send</li>
-                        <li>the emails go out from your account, and any reply comes back to your inbox</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h3 class="text-gray-900 mb-4">Scrappy Kin does not:</h3>
-                    <ul class="list-disc pl-6 space-y-2">
-                        <li>send messages without your action</li>
-                        <li>read your inbox</li>
-                        <li>manage your mailbox</li>
-                        <li>store Gmail data on its servers</li>
-                    </ul>
-                </div>
-
-                <p class="text-gray-900">The point is to keep the send in your hands while making the process easier to keep up with.</p>
+        <div class="site-shell site-stack site-stack--loose">
+            <div class="site-reading site-flow">
+                <h2 class="section-title text-gray-900">Frequently Asked Questions</h2>
+                <p class="text-gray-600">
+                    Questions about billing, Gmail permission, local data handling, and how messages are sent.
+                </p>
+                <p class="text-gray-600">
+                    Billing goes through the App Store. As much as possible, your data stays on your device or in your own email account.
+                </p>
+                <p class="text-gray-600">
+                    No analytics. No automatic crash reporting. If you hit a bug, you can manually turn on optional diagnostics and choose whether to share them with us. The code is open source if you want to inspect it yourself.
+                </p>
             </div>
-        </div>
 
-        <div class="site-shell site-stack site-divider">
-            <h3 class="text-gray-900">Related help</h3>
-            <div class="site-link-grid site-link-grid--two">
+            <div class="site-link-grid site-link-grid--two site-link-grid--faq">
                 <a href="/help/gmail-permission" class="site-link-item">
                     <h4 class="text-gray-900">How Scrappy Kin uses Gmail permission</h4>
                     <p class="text-gray-600">What Gmail access is used for, and what it does not allow.</p>
@@ -90,13 +72,19 @@
                     <p class="text-gray-600">What stays on your device, what stays in your email account, and what never reaches our servers.</p>
                     <span class="site-link-meta">Read more -&gt;</span>
                 </a>
+                <a href="/help/how-opt-out-emails-are-sent" class="site-link-item">
+                    <h4 class="text-gray-900">How opt-out emails are sent</h4>
+                    <p class="text-gray-600">How requests are prepared, reviewed, and sent from your own account.</p>
+                    <span class="site-link-meta">Read more -&gt;</span>
+                </a>
+                <a href="/help/analytics-diagnostics-and-bug-reports" class="site-link-item">
+                    <h4 class="text-gray-900">Analytics, diagnostics, and bug reports</h4>
+                    <p class="text-gray-600">What the app does not track, what optional diagnostics exist, and what only gets shared if you send it.</p>
+                    <span class="site-link-meta">Read more -&gt;</span>
+                </a>
             </div>
-        </div>
-    </main>
 
-    <footer class="site-footer border-t border-gray-200 py-16 bg-white">
-        <div class="site-shell">
-            <div class="brand-meta site-meta-row text-sm text-gray-500">
+            <div class="brand-meta site-divider site-meta-row text-sm text-gray-500">
                 <a href="/help/">Help</a>
                 <span>•</span>
                 <a href="/privacy.html">Privacy Policy</a>
@@ -104,6 +92,6 @@
                 <a href="/tos.html">Terms of Service</a>
             </div>
         </div>
-    </footer>
+    </main>
 </body>
 </html>

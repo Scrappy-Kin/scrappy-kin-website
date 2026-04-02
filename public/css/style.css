@@ -201,12 +201,6 @@ body.brand-site .site-divider {
     padding-top: var(--site-space-6);
 }
 
-body.brand-site .site-header,
-body.brand-site .site-nav,
-body.brand-site .site-footer {
-    border-bottom: 1px solid var(--site-border);
-}
-
 body.brand-site .site-footer {
     border-bottom: none;
     border-top: 1px solid var(--site-border);
@@ -255,10 +249,23 @@ body.brand-site .hero-lockup {
     filter: none;
 }
 
+body.brand-site .site-logo-mark {
+    display: block;
+    height: 2.25rem;
+    width: auto;
+}
+
 body.brand-site .site-wordmark {
     font-size: 0.95rem;
     font-weight: 700;
     line-height: 1.1;
+}
+
+body.brand-site .site-nav-links {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem 1.5rem;
 }
 
 body.brand-site .hero-lockup {
@@ -458,6 +465,10 @@ body.brand-site .site-link-grid--two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+body.brand-site .site-link-grid--faq .site-link-item {
+    border-bottom-color: rgba(70, 44, 44, 0.24);
+}
+
 body.brand-site .site-link-item {
     border-bottom: 1px solid rgba(70, 44, 44, 0.28);
     color: inherit;
@@ -472,6 +483,10 @@ body.brand-site .site-link-item {
 body.brand-site .site-link-item:hover {
     border-color: var(--brand-black);
     text-decoration: none;
+}
+
+body.brand-site .site-link-grid > .site-link-item:last-child {
+    border-bottom: none;
 }
 
 body.brand-site .site-link-item h4 {
@@ -506,6 +521,7 @@ body.brand-site .site-meta-row {
     display: flex;
     flex-wrap: wrap;
     gap: 0.65rem;
+    justify-content: center;
 }
 
 body.brand-site .brand-button {
@@ -529,6 +545,39 @@ body.brand-site .brand-button:hover {
 body.brand-site .prose {
     color: var(--brand-dark);
     max-width: 68ch;
+}
+
+body.brand-site .site-legal-toc {
+    background: rgba(255, 251, 251, 0.76);
+    border: 1px solid rgba(70, 44, 44, 0.18);
+    border-radius: 1.35rem;
+    margin-block: 1.5rem 2rem;
+    padding: 1.15rem 1.2rem 1.3rem;
+}
+
+body.brand-site .site-legal-toc-title {
+    font-family: var(--font-role-ui);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin: 0 0 0.8rem;
+    text-transform: uppercase;
+}
+
+body.brand-site .site-legal-toc-list {
+    column-gap: var(--site-space-4);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 0.55rem;
+}
+
+body.brand-site .site-legal-toc-list a {
+    font-family: var(--font-role-ui);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
 }
 
 body.brand-site .prose h2,
@@ -569,11 +618,26 @@ body.brand-site .prose code {
     padding: 0.1rem 0.45rem;
 }
 
+body.brand-site .prose a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
 body.brand-site .prose table {
     border-collapse: collapse;
     border-radius: 20px;
     overflow: hidden;
     width: 100%;
+}
+
+body.brand-site .site-table-scroll {
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+body.brand-site .site-table-scroll table {
+    min-width: 42rem;
 }
 
 body.brand-site .prose th,
@@ -597,11 +661,12 @@ body.brand-site .prose tbody tr:hover {
 }
 
 body.brand-site .site-article-shell {
-    background: rgba(255, 249, 249, 0.58);
-    border: 1px solid rgba(70, 44, 44, 0.14);
-    border-radius: 2rem;
-    box-shadow: 0 20px 36px rgba(70, 44, 44, 0.06);
-    padding: clamp(1.75rem, 4vw, 3rem);
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    padding: 0;
 }
 
 body.brand-site.brand-error .site-article-shell {
@@ -647,6 +712,10 @@ button:focus {
         flex-direction: column;
     }
 
+    body.brand-site .site-nav-links {
+        gap: 0.6rem 1.1rem;
+    }
+
     body.brand-site .step-row {
         grid-template-columns: 1fr;
         justify-items: center;
@@ -682,8 +751,11 @@ button:focus {
     }
 
     body.brand-site .site-article-shell {
-        border-radius: 1.5rem;
-        padding: 1.5rem;
+        padding: 0;
+    }
+
+    body.brand-site .site-legal-toc-list {
+        grid-template-columns: 1fr;
     }
 
     body.brand-site .hero-eyebrow {
@@ -697,6 +769,10 @@ button:focus {
 }
 
 @media (max-width: 640px) {
+    body.brand-site .site-nav-links {
+        display: none;
+    }
+
     body.brand-site .hero-copy {
         max-width: 32ch;
     }
@@ -705,5 +781,79 @@ button:focus {
     body.brand-site .site-card-grid--two,
     body.brand-site .site-link-grid--two {
         grid-template-columns: 1fr;
+    }
+
+    body.brand-site .site-link-grid--faq .site-link-item {
+        gap: 0;
+        padding: 0.65rem 0 1rem;
+    }
+
+    body.brand-site .site-link-grid--faq .site-link-item p,
+    body.brand-site .site-link-grid--faq .site-link-meta {
+        display: none;
+    }
+
+    body.brand-site .site-link-grid--faq .site-link-item h4 {
+        margin: 0;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.22em;
+    }
+
+    body.brand-site .site-table-scroll {
+        overflow: visible;
+    }
+
+    body.brand-site .site-table-scroll table,
+    body.brand-site .site-table-scroll thead,
+    body.brand-site .site-table-scroll tbody,
+    body.brand-site .site-table-scroll tr,
+    body.brand-site .site-table-scroll th,
+    body.brand-site .site-table-scroll td {
+        display: block;
+        width: 100%;
+    }
+
+    body.brand-site .site-table-scroll table {
+        min-width: 0;
+    }
+
+    body.brand-site .site-table-scroll thead {
+        display: none;
+    }
+
+    body.brand-site .site-table-scroll tbody {
+        display: grid;
+        gap: var(--site-space-4);
+    }
+
+    body.brand-site .site-table-scroll tr {
+        background: rgba(255, 251, 251, 0.82);
+        border: 1px solid var(--site-border);
+        border-radius: 1.1rem;
+        overflow: hidden;
+    }
+
+    body.brand-site .site-table-scroll td {
+        border: none;
+        border-top: 1px solid rgba(70, 44, 44, 0.14);
+        padding: 0.8rem 0.95rem 0.9rem;
+    }
+
+    body.brand-site .site-table-scroll td:first-child {
+        border-top: none;
+    }
+
+    body.brand-site .site-table-scroll td::before {
+        color: var(--brand-black);
+        content: attr(data-label);
+        display: block;
+        font-family: var(--font-role-ui);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        line-height: 1.4;
+        margin-bottom: 0.2rem;
+        text-transform: uppercase;
     }
 }

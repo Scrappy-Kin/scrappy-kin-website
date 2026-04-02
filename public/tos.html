@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700&family=Londrina+Solid:wght@400&family=Martian+Mono:wght@200;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css?v=20260401-5">
+    <link rel="stylesheet" href="/css/style.css?v=20260402-2">
     <script>
         tailwind.config = {
             theme: {
@@ -37,11 +37,10 @@
             <div class="site-nav-row">
                 <div class="flex items-center">
                     <a href="/" class="site-logo-link text-2xl font-bold text-gray-900">
-                        <img src="/shared/design-foundation/assets/logo/scrappy-kin-mark.png" alt="Scrappy Kin Logo" class="h-10 w-auto">
-                        <span class="site-wordmark">Scrappy Kin</span>
+                        <img src="/shared/design-foundation/assets/logo/scrappy-kin-nav-mark.png" alt="Scrappy Kin Logo" class="site-logo-mark">
                     </a>
                 </div>
-                <div class="flex items-center space-x-8">
+                <div class="site-nav-links">
                     <a href="/tos.html" class="text-gray-900 font-semibold">Terms of Service</a>
                     <a href="/privacy.html" class="text-gray-600 hover:text-gray-900 transition">Privacy Policy</a>
                 </div>
@@ -53,29 +52,43 @@
     <main class="site-shell site-shell--article site-article-shell site-section">
         <h1 class="text-4xl font-bold text-gray-900 mb-8">Scrappy Kin Terms of Service</h1>
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p><strong>Effective date:</strong> March 16, 2026</p>
+            <p class="mt-4"><strong>Effective date:</strong> March 16, 2026</p>
             <p>These Terms describe the limited service Scrappy Kin offers today. Scrappy Kin helps you prepare and send opt-out emails that you initiate. Bulk automation, inbox access, or broader Gmail permissions are out of scope.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">1. Who we are</h2>
+            <div class="site-legal-toc">
+                <p class="site-legal-toc-title text-gray-900">On this page</p>
+                <div class="site-legal-toc-list">
+                    <a href="#who-we-are">Who we are</a>
+                    <a href="#what-the-service-does">What the service does</a>
+                    <a href="#eligibility-and-gmail-access">Eligibility and Gmail access</a>
+                    <a href="#acceptable-use">Acceptable use</a>
+                    <a href="#fees">Fees</a>
+                    <a href="#privacy">Privacy</a>
+                    <a href="#disclaimers-and-liability-limits">Disclaimers and liability limits</a>
+                    <a href="#contact-information">Contact information</a>
+                </div>
+            </div>
+
+            <h2 id="who-we-are" class="text-2xl font-semibold text-gray-900">1. Who we are</h2>
             <p>Scrappy Kin Inc. ("Scrappy Kin", "we", "us") is a Canadian company. Contact <a href="mailto:support@scrappykin.com" class="text-pink-600">support@scrappykin.com</a> for general help or <a href="mailto:privacy@scrappykin.com" class="text-pink-600">privacy@scrappykin.com</a> for privacy matters.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">2. What the service does (and does not do)</h2>
+            <h2 id="what-the-service-does" class="text-2xl font-semibold text-gray-900">2. What the service does (and does not do)</h2>
             <ul class="list-disc pl-6">
-                <li>Scrappy Kin connects to your Google account only after you approve the <code>gmail.send</code> scope.</li>
-                <li>The app helps you compose and send a specific opt-out or data-rights request email to the third-party recipient you choose.</li>
+                <li>Scrappy Kin connects to your Google account only after you approve Google's <code>gmail.send</code> permission (send email only).</li>
+                <li>The app helps you review and send batches of opt-out or data-rights request emails to the third-party recipients you choose, using a template you review before anything is sent.</li>
                 <li>Scrappy Kin never reads your inbox, downloads message history, or applies any Gmail scope beyond <code>gmail.send</code> plus the basic identity scopes Google requires for sign-in.</li>
-                <li>Scrappy Kin does not act as your agent. You review and approve every message before it is sent.</li>
+                <li>Scrappy Kin does not act as your agent. You review and approve every batch before it is sent.</li>
                 <li>Scrappy Kin does not provide legal representation or guarantees about a broker's response.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-900">3. Eligibility and connected Gmail access</h2>
+            <h2 id="eligibility-and-gmail-access" class="text-2xl font-semibold text-gray-900">3. Eligibility and connected Gmail access</h2>
             <ul class="list-disc pl-6">
                 <li>You must be at least 18 (or the age of majority in your jurisdiction) to use Scrappy Kin.</li>
                 <li>You are responsible for keeping your device secure and for any activity initiated with your Google account while connected.</li>
                 <li>You may disconnect Gmail at any time inside the app or via <a href="https://myaccount.google.com/permissions" class="text-pink-600">Google account settings</a>.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-900">4. Acceptable use</h2>
+            <h2 id="acceptable-use" class="text-2xl font-semibold text-gray-900">4. Acceptable use</h2>
             <p>You agree not to:</p>
             <ul class="list-disc pl-6">
                 <li>Attempt to access Gmail scopes other than <code>gmail.send</code> through Scrappy Kin.</li>
@@ -86,19 +99,19 @@
             </ul>
             <p>We may suspend or terminate access if we detect behavior that risks approval, security, or legal compliance.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">5. Fees</h2>
+            <h2 id="fees" class="text-2xl font-semibold text-gray-900">5. Fees</h2>
             <p>If you purchase a paid plan inside Scrappy Kin, the fee is charged through the platform where you subscribed (e.g., Apple App Store). Taxes may apply. We do not add hidden fees for Gmail access.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">6. Privacy</h2>
+            <h2 id="privacy" class="text-2xl font-semibold text-gray-900">6. Privacy</h2>
             <p>Our <a href="https://scrappykin.com/privacy.html" class="text-pink-600">Privacy Policy</a> explains how we handle Google user data. By using Scrappy Kin you agree to that policy. For Gmail access we comply with the Google API Services User Data Policy (Limited Use). The Gmail data flow is further described at <a href="/privacy.html#google-user-data" class="text-pink-600">/privacy.html#google-user-data</a>.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">7. Service changes and availability</h2>
+            <h2 id="service-changes-and-availability" class="text-2xl font-semibold text-gray-900">7. Service changes and availability</h2>
             <ul class="list-disc pl-6">
                 <li>We may update Scrappy Kin, including security fixes or UX changes, without prior notice.</li>
                 <li>We may throttle, suspend, or discontinue Gmail features at any time if needed for safety, compliance, or platform requirements.</li>
             </ul>
 
-            <h2 class="text-2xl font-semibold text-gray-900">8. Disclaimers and liability limits</h2>
+            <h2 id="disclaimers-and-liability-limits" class="text-2xl font-semibold text-gray-900">8. Disclaimers and liability limits</h2>
             <p>Scrappy Kin is provided "as is" during this early release. To the fullest extent allowed by law:</p>
             <ul class="list-disc pl-6">
                 <li>We disclaim warranties of merchantability, fitness for a particular purpose, and non-infringement.</li>
@@ -107,16 +120,16 @@
             </ul>
             <p>These limits do not apply where prohibited by law or to liability for fraud, intentional misconduct, or death/personal injury caused by negligence.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">9. Indemnity</h2>
+            <h2 id="indemnity" class="text-2xl font-semibold text-gray-900">9. Indemnity</h2>
             <p>You agree to indemnify Scrappy Kin against claims that arise from your misuse of the service, including sending unlawful content or violating someone else's rights, unless the claim is caused by our breach of these Terms.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">10. Governing law</h2>
+            <h2 id="governing-law" class="text-2xl font-semibold text-gray-900">10. Governing law</h2>
             <p>These Terms are governed by the laws of the Province of Quebec and the federal laws of Canada, without regard to conflict-of-laws rules. Any dispute will be resolved in the courts located in Montreal, Quebec, unless your local law requires a different venue.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">11. Changes to these Terms</h2>
+            <h2 id="changes-to-these-terms" class="text-2xl font-semibold text-gray-900">11. Changes to these Terms</h2>
             <p>If we make material changes, we will post the update date on this page, describe the changes inside the app, and, when required, notify you by email. Continued use of Scrappy Kin after the effective date means you accept the revised Terms.</p>
 
-            <h2 class="text-2xl font-semibold text-gray-900">12. Contact information</h2>
+            <h2 id="contact-information" class="text-2xl font-semibold text-gray-900">12. Contact information</h2>
             <ul class="list-disc pl-6">
                 <li><strong>Support:</strong> <a href="mailto:support@scrappykin.com" class="text-pink-600">support@scrappykin.com</a></li>
                 <li><strong>Privacy:</strong> <a href="mailto:privacy@scrappykin.com" class="text-pink-600">privacy@scrappykin.com</a></li>
@@ -126,18 +139,16 @@
     </main>
 
     <!-- Footer -->
-    <footer class="site-footer bg-white border-t border-gray-200 mt-20">
+    <footer class="site-footer border-t border-gray-200 py-16 bg-white">
         <div class="site-shell">
-            <div class="flex justify-between items-center">
-                <p class="text-gray-600">&copy; 2025 Scrappy Kin. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="/tos.html" class="text-gray-900 font-semibold">Terms</a>
-                    <a href="/privacy.html" class="text-gray-600 hover:text-gray-900 transition">Privacy</a>
-                </div>
+            <div class="brand-meta site-meta-row text-sm text-gray-500">
+                <a href="/help/">Help</a>
+                <span>•</span>
+                <a href="/privacy.html">Privacy Policy</a>
+                <span>•</span>
+                <a href="/tos.html">Terms of Service</a>
             </div>
         </div>
     </footer>
-
-    <script src="/js/main.js"></script>
 </body>
 </html>
