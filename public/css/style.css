@@ -196,6 +196,10 @@ body.brand-site .site-flow--compact > * + * {
     margin-top: var(--site-space-2);
 }
 
+body.brand-help .site-shell--reading > .site-flow {
+    padding-bottom: var(--site-space-4);
+}
+
 body.brand-site .site-divider {
     border-top: 1px solid var(--site-border);
     padding-top: var(--site-space-6);
@@ -203,8 +207,8 @@ body.brand-site .site-divider {
 
 body.brand-site .site-footer {
     border-bottom: none;
-    border-top: 1px solid var(--site-border);
-    margin-top: var(--site-space-7);
+    border-top: none;
+    margin-top: var(--site-space-8);
     padding-block: var(--site-space-6);
 }
 
@@ -483,10 +487,6 @@ body.brand-site .site-link-item {
 body.brand-site .site-link-item:hover {
     border-color: var(--brand-black);
     text-decoration: none;
-}
-
-body.brand-site .site-link-grid > .site-link-item:last-child {
-    border-bottom: none;
 }
 
 body.brand-site .site-link-item h4 {
