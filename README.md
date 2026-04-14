@@ -6,7 +6,7 @@ Simple static marketing website for scrappykin.com built with Tailwind CSS, vani
 
 Scrappy Kin planning canon lives in HQ:
 - `/Users/jonamar/Development/scrappy-kin/scrappy-kin-hq/README.md`
-- `/Users/jonamar/Development/scrappy-kin/scrappy-kin-hq/workstreams/google-auth-phase-a/shared.md`
+- `/Users/jonamar/Development/scrappy-kin/scrappy-kin-hq/workstreams/parked-google-auth-phase-a/shared.md`
 
 This repo is the execution surface for the website and deploy/runtime work only.
 
