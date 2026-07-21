@@ -68,59 +68,42 @@ Then visit http://localhost:8000
 
 ### Deploy to VPS
 
+Run the canonical repo-root deploy wrapper:
+
 ```bash
-chmod +x scripts/deploy.sh
-./scripts/deploy.sh
+cd /Users/jonamar/Development/generic-vps-hetzner
+./scripts/deploy.sh scrappykin
 ```
 
 The script will:
-1. Push your current branch to `origin/main`
-2. Deploy `scrappykin/` via `service-deploy`
-3. Restart the service via `service-restart`
-4. Show you the container status
+1. Abort if the repo has uncommitted changes
+2. Push the current commit
+3. Deploy `scrappykin/` through the VPS wrapper
+4. Restart the service
+5. Confirm the deployed SHA matches the local commit
 
-### Manual Deployment Steps
-
-If you prefer to deploy manually:
-
-1. **Push the repo:**
-   ```bash
-   git push origin main
-   ```
-
-2. **Deploy the service:**
-   ```bash
-   ssh vps-ops "sudo service-deploy scrappykin"
-   ```
-
-3. **Restart Scrappykin:**
-   ```bash
-   ssh vps-ops "sudo service-restart scrappykin"
-   ```
-
-4. **Check status / logs:**
-   ```bash
-   ssh vps-ops "sudo service-inspect ps scrappykin"
-   ssh vps-ops "sudo service-logs scrappykin 50"
-   ```
+Do not deploy through `scrappykin/scripts/deploy.sh` or hand-written SSH commands. The repo-root wrapper is the single deployment entrypoint.
 
 ## Updating Content
 
 ### Update Legal Pages
 
 1. Edit `public/tos.html` or `public/privacy.html` locally
-2. Run `./scripts/deploy.sh` to push changes
+2. Commit the change
+3. From the repo root, run `./scripts/deploy.sh scrappykin`
 
 ### Update Home Page
 
 1. Edit `public/index.html` locally
-2. Run `./scripts/deploy.sh` to push changes
+2. Commit the change
+3. From the repo root, run `./scripts/deploy.sh scrappykin`
 
 ### Update Styles
 
 1. Edit `public/css/style.css` for custom CSS
 2. Modify Tailwind classes directly in HTML files
-3. Run `./scripts/deploy.sh` to push changes
+3. Commit the change
+4. From the repo root, run `./scripts/deploy.sh scrappykin`
 
 ## Management Commands
 

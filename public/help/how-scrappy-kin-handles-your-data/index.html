@@ -72,17 +72,18 @@
                     </ul>
                 </div>
 
-                <p class="text-gray-900">The <a href="https://github.com/Scrappy-Kin/scrappy-kin-ios" class="text-pink-600 underline">Scrappy Kin codebase is public on GitHub</a>, so you do not have to take our word for it. If something breaks, you can email us directly and read the full error report yourself. If you disconnect Gmail inside Scrappy Kin or via <a href="https://myaccount.google.com/permissions" class="text-pink-600 underline">Google account settings</a>, the token stored on your device is deleted immediately.</p>
+                <p class="text-gray-900">The <a href="https://github.com/Scrappy-Kin/scrappy-kin-ios" class="text-pink-600 underline">Scrappy Kin codebase is public on GitHub</a>, so you do not have to take our word for it. If something breaks, you can email us directly and read the full error report yourself.</p>
 
                 <div>
-                    <h3 class="text-gray-900 mb-4">Gmail tokens stay on your device</h3>
-                    <p>When you connect Gmail, Google issues a token that lets Scrappy Kin send on your behalf. That token:</p>
+                    <h3 class="text-gray-900 mb-4">Gmail access stays on your iPhone</h3>
+                    <p>When you connect Gmail, Google gives Scrappy Kin a saved permission that lets the app send on your behalf. That permission:</p>
                     <ul class="list-disc pl-6 space-y-2 mt-3">
-                        <li>is stored in your device's operating system secure storage (Keychain on iOS/macOS, Keystore on Android)</li>
+                        <li>is stored in the iPhone Keychain</li>
                         <li>is never synced to Scrappy Kin servers — we cannot act on your behalf without the copy on your device</li>
                         <li>stays on a direct device-to-Google path: opt-out emails go from your device to Google via the Gmail API, not through our infrastructure</li>
-                        <li>is deleted immediately when you revoke access in-app or at <a href="https://myaccount.google.com/permissions" class="text-pink-600 underline">Google account settings</a></li>
+                        <li>is deleted from your iPhone when you disconnect Gmail inside Scrappy Kin</li>
                     </ul>
+                    <p class="mt-3">Removing access in <a href="https://myaccount.google.com/permissions" class="text-pink-600 underline">Google Account settings</a> disables the permission at Google. Google cannot delete the saved permission from your iPhone, so use Scrappy Kin's disconnect control if you also want to remove the local copy.</p>
                 </div>
 
                 <div>

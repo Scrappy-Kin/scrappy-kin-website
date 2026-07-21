@@ -52,19 +52,19 @@
     <main class="site-shell site-shell--article site-article-shell site-section">
         <h1 class="text-4xl font-bold text-gray-900 mb-8">Scrappy Kin Privacy Policy</h1>
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p class="mt-4"><strong>Effective date:</strong> March 16, 2026<br>
-            <strong>Applies to:</strong> Scrappy Kin mobile app, connected Gmail sending flows, and related support touchpoints.</p>
+            <p class="mt-4"><strong>Effective date:</strong> July 21, 2026<br>
+            <strong>Applies to:</strong> The Scrappy Kin iPhone app, Gmail sending, and user-initiated support conversations.</p>
 
-            <p>This policy explains how Scrappy Kin handles personal data and Google user data for the current Gmail permission flow. It reflects Scrappy Kin's zero-trust design, Google's <code>gmail.send</code> permission (send email only), and Google API Services User Data Policy commitments.</p>
+            <p>This policy explains what stays on your iPhone, what goes through Google when you send an email, and what Scrappy Kin receives only if you choose to contact us. Scrappy Kin requests only Google's <code>gmail.send</code> permission and does not operate an account or user-data backend.</p>
 
             <div class="site-legal-toc">
                 <p class="site-legal-toc-title text-gray-900">On this page</p>
                 <div class="site-legal-toc-list">
                     <a href="#who-we-are">Who we are</a>
-                    <a href="#data-we-access">Data we access</a>
+                    <a href="#data-we-access">Data the app uses</a>
                     <a href="#data-we-do-not-access">Data we do not access</a>
                     <a href="#google-user-data">How Gmail data flows</a>
-                    <a href="#token-cache-log-handling">Token, cache, and log handling</a>
+                    <a href="#token-cache-log-handling">Local storage and diagnostics</a>
                     <a href="#limited-use-compliance">Limited Use compliance</a>
                     <a href="#your-choices">Your choices</a>
                     <a href="#contact-us">Contact us</a>
@@ -72,17 +72,16 @@
             </div>
 
             <h2 id="who-we-are" class="text-2xl font-semibold text-gray-900">1. Who we are</h2>
-            <p>Scrappy Kin Inc. ("Scrappy Kin", "we", "us") is a Canadian company that builds tools letting people trigger verified opt-out requests without handing over inbox access.</p>
+            <p>Scrappy Kin Inc. ("Scrappy Kin", "we", "us") is a Canadian company that builds tools for sending data-broker opt-out requests without handing Scrappy Kin access to your inbox.</p>
 
             <h2 id="what-this-policy-covers" class="text-2xl font-semibold text-gray-900">2. What this policy covers</h2>
             <ul class="list-disc pl-6">
-                <li>The Scrappy Kin consumer app and related reviewer materials</li>
-                <li>Our use of the Gmail API sensitive scope <code>gmail.send</code></li>
-                <li>Any user-initiated support conversations tied to those flows</li>
+                <li>The Scrappy Kin iPhone app</li>
+                <li>Scrappy Kin's use of the Gmail API permission <code>gmail.send</code></li>
+                <li>Support or privacy emails you choose to send to Scrappy Kin</li>
             </ul>
-            <p>It does <strong>not</strong> cover future Gmail scopes, enterprise deployments, or non-Google integrations.</p>
 
-            <h2 id="data-we-access" class="text-2xl font-semibold text-gray-900">3. Data we access</h2>
+            <h2 id="data-we-access" class="text-2xl font-semibold text-gray-900">3. Data the app uses</h2>
             <div class="site-table-scroll">
                 <table class="w-full text-sm border border-gray-200">
                     <thead>
@@ -90,39 +89,39 @@
                             <th class="p-3 border border-gray-200">Data category</th>
                             <th class="p-3 border border-gray-200">Source</th>
                             <th class="p-3 border border-gray-200">Purpose</th>
-                            <th class="p-3 border border-gray-200">Storage / retention</th>
+                            <th class="p-3 border border-gray-200">Where it stays</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Data category" class="p-3 border border-gray-200">Contact details you choose to provide (e.g., when you email support)</td>
-                            <td data-label="Source" class="p-3 border border-gray-200">Collected directly from you</td>
-                            <td data-label="Purpose" class="p-3 border border-gray-200">Support and privacy/compliance communication</td>
-                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Used only to respond to you, maintain support records, and meet legal obligations; never used for ads</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Profile details: full name, email address, city, and optional state and partial ZIP code</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Entered by you in the app</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Included in the opt-out emails you review and send</td>
+                            <td data-label="Where it stays" class="p-3 border border-gray-200">Encrypted local app storage on your iPhone; not uploaded to Scrappy Kin servers</td>
                         </tr>
                         <tr>
-                            <td data-label="Data category" class="p-3 border border-gray-200">Gmail OAuth token</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Saved Gmail permission</td>
                             <td data-label="Source" class="p-3 border border-gray-200">Granted by you through Google's consent screen</td>
                             <td data-label="Purpose" class="p-3 border border-gray-200">Allows Scrappy Kin to send opt-out emails that you initiate</td>
-                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Stored only on your device inside the operating system's secure storage; encrypted at rest; cleared automatically if you disconnect in-app or via Google Security settings</td>
+                            <td data-label="Where it stays" class="p-3 border border-gray-200">The iPhone Keychain; deleted from your iPhone when you disconnect Gmail inside Scrappy Kin</td>
                         </tr>
                         <tr>
-                            <td data-label="Data category" class="p-3 border border-gray-200">Message drafts, edits, and recipients you review in Scrappy Kin</td>
-                            <td data-label="Source" class="p-3 border border-gray-200">Entered or edited by you when you build and review a batch</td>
-                            <td data-label="Purpose" class="p-3 border border-gray-200">Used to create and send the batch of emails you review and approve</td>
-                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Persisted on your device only, not uploaded to Scrappy Kin servers; cleared after the batch is sent</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Email wording, send queue, and local sent history</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Prepared by the app and optionally edited by you</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Lets you review requests before sending and see which broker emails were sent</td>
+                            <td data-label="Where it stays" class="p-3 border border-gray-200">Encrypted local app storage on your iPhone; not uploaded to Scrappy Kin servers</td>
                         </tr>
                         <tr>
-                            <td data-label="Data category" class="p-3 border border-gray-200">Broker-response evidence you choose to attach</td>
-                            <td data-label="Source" class="p-3 border border-gray-200">Optional upload from you</td>
-                            <td data-label="Purpose" class="p-3 border border-gray-200">Lets you track outcomes and document broker behavior</td>
-                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Stored locally on your device; if you email us for help we only receive what you send</td>
+                            <td data-label="Data category" class="p-3 border border-gray-200">Optional troubleshooting logs</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Created locally only when you turn diagnostics on</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Helps you inspect and share technical details when troubleshooting</td>
+                            <td data-label="Where it stays" class="p-3 border border-gray-200">Encrypted local app storage on your iPhone unless you manually export and share it</td>
                         </tr>
                         <tr>
                             <td data-label="Data category" class="p-3 border border-gray-200">Support correspondence</td>
-                            <td data-label="Source" class="p-3 border border-gray-200">Emails between you and Scrappy Kin</td>
-                            <td data-label="Purpose" class="p-3 border border-gray-200">Troubleshooting and compliance follow-up</td>
-                            <td data-label="Storage / retention" class="p-3 border border-gray-200">Stored in our support systems as reasonably needed to respond, comply with law, and protect the service</td>
+                            <td data-label="Source" class="p-3 border border-gray-200">Emails and attachments you choose to send to Scrappy Kin</td>
+                            <td data-label="Purpose" class="p-3 border border-gray-200">Responding to support and privacy questions</td>
+                            <td data-label="Where it stays" class="p-3 border border-gray-200">The support or privacy inbox. You can ask us to delete your correspondence, subject to legal obligations.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -131,7 +130,7 @@
             <h2 id="data-we-do-not-access" class="text-2xl font-semibold text-gray-900">4. Data we do <span class="uppercase">not</span> access</h2>
             <ul class="list-disc pl-6">
                 <li>We do not read, index, or store your Gmail inbox, labels, or metadata.</li>
-                <li>We do not request or store broader Gmail scopes such as <code>gmail.readonly</code>, <code>gmail.modify</code>, <code>gmail.metadata</code>, or <code>gmail.labels</code>. In plain English, those are the kinds of permissions that would let an app read your email, inspect message metadata, or change mailbox state instead of just sending the email you approve.</li>
+                <li>We do not request Gmail permissions that would let Scrappy Kin read your email, inspect message metadata, or change your mailbox.</li>
                 <li>We do not sell personal data or use Google data for advertising.</li>
                 <li>We do not run background services that send email without your review and approval.</li>
             </ul>
@@ -139,27 +138,28 @@
             <h2 id="google-user-data" class="text-2xl font-semibold text-gray-900">5. How Gmail data flows</h2>
             <ol class="list-decimal pl-6">
                 <li>You tap <strong>Connect Gmail</strong> and Google shows the OAuth consent screen.</li>
-                <li>We request only <code>gmail.send</code> so Scrappy Kin can deliver the batch of opt-out emails you have reviewed and chosen to send.</li>
-                <li>After you approve the scope, Scrappy Kin stores the token locally on your device and uses it only when you approve and dispatch a batch.</li>
-                <li>No Gmail content is copied to Scrappy Kin servers. The message goes directly from your device to Google via the Gmail API.</li>
-                <li>When you revoke access in Scrappy Kin or at <a href="https://myaccount.google.com/permissions" class="text-pink-600">https://myaccount.google.com/permissions</a>, we delete the local token and cannot send on your behalf until you reconnect.</li>
+                <li>Scrappy Kin requests only <code>gmail.send</code> so the app can deliver the prepared broker emails you review and approve.</li>
+                <li>After you approve the permission, Scrappy Kin stores it in the iPhone Keychain and uses it only when you approve a send.</li>
+                <li>No Gmail content is copied to Scrappy Kin servers. The email goes directly from your iPhone to Google, then to the broker or privacy contact shown in the prepared request.</li>
+                <li>When you disconnect Gmail inside Scrappy Kin, the app asks Google to revoke access and deletes the saved permission from your iPhone.</li>
+                <li>If you remove access in <a href="https://myaccount.google.com/permissions" class="text-pink-600">Google Account settings</a>, Google disables the permission but cannot delete data stored on your iPhone. Use Scrappy Kin's disconnect control if you also want to remove the local copy.</li>
             </ol>
 
-            <h2 id="token-cache-log-handling" class="text-2xl font-semibold text-gray-900">6. Token, cache, and log handling</h2>
+            <h2 id="token-cache-log-handling" class="text-2xl font-semibold text-gray-900">6. Local storage and diagnostics</h2>
             <ul class="list-disc pl-6">
-                <li>Tokens live only in OS-provided secure storage (Keychain on iOS/macOS, Keystore on Android, system credential vault on desktop).</li>
-                <li>Scrappy Kin apps do not sync Gmail tokens to our servers, and we cannot act on your behalf without the copy on your device.</li>
-                <li>Local caches (recent brokers, drafts) remain on your device so you can review your activity without pinging our infrastructure.</li>
+                <li>The saved Gmail permission lives only in the iPhone Keychain. Scrappy Kin does not sync it to our servers.</li>
+                <li>Your profile, email wording, send queue, and sent history stay in encrypted local app storage on your iPhone.</li>
+                <li>Deleting all local data removes that local app data and disconnects Gmail. Deleting local data does not cancel an Apple subscription.</li>
                 <li>Scrappy Kin uses no analytics SDKs, no third-party tracking tools, and no automatic crash-reporting services.</li>
                 <li>Optional local diagnostics are off by default; if you turn them on, logs stay on your device and are only shared if you manually export and send them to us.</li>
-                <li>Narrow troubleshooting logs, when enabled, record app state only — not a background pipeline, not used to capture Gmail content.</li>
+                <li>Troubleshooting logs record limited app events and state, not Gmail content.</li>
             </ul>
 
             <h2 id="limited-use-compliance" class="text-2xl font-semibold text-gray-900">7. Limited Use compliance</h2>
             <p>Scrappy Kin complies with the <a href="https://developers.google.com/terms/api-services-user-data-policy" class="text-pink-600">Google API Services User Data Policy, including the Limited Use requirements</a>. Specifically:</p>
             <ul class="list-disc pl-6">
                 <li>Gmail data is used only to send the opt-out emails you initiate and to show you a local record of the attempt.</li>
-                <li>Gmail data is not transferred to anyone else except to deliver the message to the broker you selected and to Google as the email provider.</li>
+                <li>Gmail data is transferred only to Google as the email provider and to the broker or privacy contact shown in the prepared email you approve.</li>
                 <li>No Gmail data is used for advertising, human training, or unrelated features.</li>
                 <li>Human access to Google user data occurs only when you explicitly share details with Scrappy Kin support.</li>
             </ul>
@@ -168,10 +168,9 @@
             <p>We only share Gmail data in these cases:</p>
             <ul class="list-disc pl-6">
                 <li>With Google, solely to send the email you approved via the Gmail API</li>
-                <li>With the recipient you selected (usually a data broker or privacy contact) as part of that email</li>
-                <li>With regulators or law enforcement if we are legally required to do so, after verifying the request and notifying you when legally allowed</li>
+                <li>With the broker or privacy contact shown in the prepared email you approve</li>
             </ul>
-            <p>Because Scrappy Kin is designed to keep Gmail content, tokens, and opt-out data on your device, we generally do not hold the underlying personal information you are sending to brokers. If we receive a legal request, the main user-specific information we may actually have is whatever you directly sent us through support or privacy correspondence.</p>
+            <p>Because Scrappy Kin keeps Gmail content, the saved Gmail permission, and your opt-out data on your iPhone, the main user-specific information we may hold is whatever you directly send us through support or privacy email. We may disclose correspondence we hold if the law requires it.</p>
             <p>We do not sell personal data or license Gmail data to partners.</p>
 
             <h2 id="security-posture" class="text-2xl font-semibold text-gray-900">9. Security posture</h2>
@@ -180,16 +179,18 @@
             <h2 id="your-choices" class="text-2xl font-semibold text-gray-900">10. Your choices</h2>
             <p>For a plain-language guide to deleting local app data, disconnecting Gmail, managing subscriptions, and controlling diagnostics, see <a href="/help/privacy-choices" class="text-pink-600">Privacy choices</a>.</p>
             <ul class="list-disc pl-6">
-                <li>Disconnect Gmail any time at <a href="https://myaccount.google.com/permissions" class="text-pink-600">https://myaccount.google.com/permissions</a> or inside Scrappy Kin's settings</li>
+                <li>Disconnect Gmail inside Scrappy Kin to ask Google to revoke access and delete the saved permission from your iPhone</li>
+                <li>Disable Scrappy Kin's Google permission separately in <a href="https://myaccount.google.com/permissions" class="text-pink-600">Google Account settings</a></li>
+                <li>Delete your profile, email wording, send history, queue, and diagnostics through <strong>Settings &gt; Privacy &amp; local data</strong></li>
                 <li>Ask privacy questions or request deletion of support correspondence by contacting <a href="mailto:privacy@scrappykin.com" class="text-pink-600">privacy@scrappykin.com</a></li>
                 <li>Opt out of optional diagnostics entirely</li>
             </ul>
 
             <h2 id="childrens-data" class="text-2xl font-semibold text-gray-900">11. Children's data</h2>
-            <p>Scrappy Kin is not directed to children under 13 (or the minimum age in your jurisdiction). We do not knowingly collect data from children and will delete it if we discover we have done so.</p>
+            <p>Scrappy Kin is intended for people 16 and older, is not directed to children under 13, and does not knowingly collect personal data from children under 13. Scrappy Kin does not ask for a birth date or verify a user's age.</p>
 
             <h2 id="changes-to-this-policy" class="text-2xl font-semibold text-gray-900">12. Changes to this policy</h2>
-            <p>We will post future updates at scrappykin.com/privacy.html with a clear effective date and summarize material changes in-product. We will also update the reviewer packet shared with Google.</p>
+            <p>We will post updates at scrappykin.com/privacy.html with a clear effective date and, when practical, summarize material changes inside the app.</p>
 
             <h2 id="contact-us" class="text-2xl font-semibold text-gray-900">13. Contact us</h2>
             <ul class="list-disc pl-6">

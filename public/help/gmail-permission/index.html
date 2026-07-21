@@ -57,7 +57,7 @@
                     <ul class="list-disc pl-6 space-y-2">
                         <li>send the batch of opt-out emails you review and choose to send</li>
                         <li>use your Gmail account as the sender</li>
-                        <li>store the Gmail token locally on your device (never on Scrappy Kin servers)</li>
+                        <li>store the Gmail permission locally on your iPhone (never on Scrappy Kin servers)</li>
                     </ul>
                 </div>
 
@@ -74,7 +74,7 @@
                 <div>
                     <h3 class="text-gray-900 mb-4">Why we use it:</h3>
                     <p>Many brokers still require email as part of their opt-out process. Sending the request from your own account keeps you in control and avoids handing sensitive personal data to another service.</p>
-                    <p class="mt-3">If you disconnect inside Scrappy Kin or via <a href="https://myaccount.google.com/permissions" class="text-pink-600 underline">Google account settings</a>, the Gmail token is deleted on your device and Scrappy Kin cannot send again until you reconnect.</p>
+                    <p class="mt-3">If you disconnect inside Scrappy Kin, the app asks Google to revoke access and deletes the saved Gmail permission from your iPhone. If you remove access in <a href="https://myaccount.google.com/permissions" class="text-pink-600 underline">Google Account settings</a>, Google disables the permission, but Google cannot delete data stored on your iPhone. Scrappy Kin cannot send again after Google disables access unless you reconnect.</p>
                 </div>
 
                 <p class="text-gray-900">For the full Gmail data flow and Google-user-data commitments, review <a href="/privacy.html#google-user-data" class="text-pink-600 underline">/privacy.html#google-user-data</a>.</p>
