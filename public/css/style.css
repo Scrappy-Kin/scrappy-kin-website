@@ -489,9 +489,18 @@ body.brand-site .site-link-item:hover {
     text-decoration: none;
 }
 
-body.brand-site .site-link-item h4 {
+body.brand-site .site-link-item h4,
+body.brand-site .site-link-item .site-link-heading {
     font-size: 0.95rem;
     margin-bottom: 0.1rem;
+}
+
+body.brand-site .site-link-item .site-link-heading {
+    font-family: var(--font-role-ui);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1.18;
+    text-transform: uppercase;
 }
 
 body.brand-site .site-link-item p {
@@ -793,7 +802,8 @@ button:focus {
         display: none;
     }
 
-    body.brand-site .site-link-grid--faq .site-link-item h4 {
+    body.brand-site .site-link-grid--faq .site-link-item h4,
+    body.brand-site .site-link-grid--faq .site-link-item .site-link-heading {
         margin: 0;
         text-decoration: underline;
         text-decoration-thickness: 1px;
