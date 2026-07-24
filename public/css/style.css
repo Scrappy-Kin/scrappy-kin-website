@@ -354,10 +354,6 @@ body.brand-site .step-row {
     padding-block: var(--site-space-5);
 }
 
-body.brand-site .step-row + .step-row {
-    border-top: 1px solid var(--site-border);
-}
-
 body.brand-site .step-text-row {
     align-items: start;
     align-self: center;
@@ -489,6 +485,7 @@ body.brand-site .site-link-item:hover {
     text-decoration: none;
 }
 
+body.brand-site .site-link-item h3,
 body.brand-site .site-link-item h4,
 body.brand-site .site-link-item .site-link-heading {
     font-size: 0.95rem;
@@ -802,6 +799,7 @@ button:focus {
         display: none;
     }
 
+    body.brand-site .site-link-grid--faq .site-link-item h3,
     body.brand-site .site-link-grid--faq .site-link-item h4,
     body.brand-site .site-link-grid--faq .site-link-item .site-link-heading {
         margin: 0;
