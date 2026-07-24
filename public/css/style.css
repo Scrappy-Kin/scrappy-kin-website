@@ -745,8 +745,8 @@ button:focus {
 
     body.brand-site .step-image {
         margin-left: 0;
-        max-height: 360px;
-        width: auto;
+        max-height: none;
+        width: 100%;
     }
 
     body.brand-site .site-card-grid,
