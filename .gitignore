@@ -18,3 +18,15 @@ yarn-error.log*
 # Temporary files
 *.tmp
 .cache/
+
+# Generated agent surfaces owned by product-ops
+/.agents/
+/.claude/
+/AGENTS.md
+/CLAUDE.md
+
+/.local/post-run-distillation/
+
+deliverables/reviews/*.log
+
+deliverables/reviews/**/*.log
