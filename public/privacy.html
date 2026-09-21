@@ -29,6 +29,8 @@
             }
         }
     </script>
+    <script defer src="/_analytics/script.js"></script>
+    <script defer src="/js/analytics-choices.js"></script>
 </head>
 <body class="brand-site brand-legal bg-gray-50">
     <!-- Navigation -->
@@ -52,8 +54,8 @@
     <main class="site-shell site-shell--article site-article-shell site-section">
         <h1 class="text-4xl font-bold text-gray-900 mb-8">Scrappy Kin Privacy Policy</h1>
         <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
-            <p class="mt-4"><strong>Effective date:</strong> July 21, 2026<br>
-            <strong>Applies to:</strong> The Scrappy Kin iPhone app, Gmail sending, and user-initiated support conversations.</p>
+            <p class="mt-4"><strong>Effective date:</strong> September 1, 2026<br>
+            <strong>Applies to:</strong> The Scrappy Kin iPhone app, Gmail sending, this website, and user-initiated support conversations.</p>
 
             <p>This policy explains what stays on your iPhone, what goes through Google when you send an email, and what Scrappy Kin receives only if you choose to contact us. Scrappy Kin requests only Google's <code>gmail.send</code> permission and does not operate an account or user-data backend.</p>
 
@@ -65,6 +67,7 @@
                     <a href="#data-we-do-not-access">Data we do not access</a>
                     <a href="#google-user-data">How Gmail data flows</a>
                     <a href="#token-cache-log-handling">Local storage and diagnostics</a>
+                    <a href="#website-measurement">Website measurement</a>
                     <a href="#limited-use-compliance">Limited Use compliance</a>
                     <a href="#your-choices">Your choices</a>
                     <a href="#contact-us">Contact us</a>
@@ -150,7 +153,7 @@
                 <li>The saved Gmail permission lives only in the iPhone Keychain. Scrappy Kin does not sync it to our servers.</li>
                 <li>Your profile, email wording, send queue, and sent history stay in encrypted local app storage on your iPhone.</li>
                 <li>Deleting all local data removes that local app data and disconnects Gmail. Deleting local data does not cancel an Apple subscription.</li>
-                <li>Scrappy Kin uses no analytics SDKs, no third-party tracking tools, and no automatic crash-reporting services.</li>
+                <li>The Scrappy Kin iPhone app uses no analytics SDKs, no third-party tracking tools, and no automatic crash-reporting services.</li>
                 <li>Optional local diagnostics are off by default; if you turn them on, logs stay on your device and are only shared if you manually export and send them to us.</li>
                 <li>Troubleshooting logs record limited app events and state, not Gmail content.</li>
             </ul>
@@ -163,6 +166,16 @@
                 <li>No Gmail data is used for advertising, human training, or unrelated features.</li>
                 <li>Human access to Google user data occurs only when you explicitly share details with Scrappy Kin support.</li>
             </ul>
+
+            <h2 id="website-measurement" class="text-2xl font-semibold text-gray-900">Website measurement</h2>
+            <p>We count coarse, first-party website activity so we can learn whether people find Scrappy Kin and which public pages are useful. We keep daily totals for page views, anonymous daily visitors, normalized page paths, and broad referring domains. We do not collect geography, browser or device categories, account identity, cookies, full URLs, or cross-site history.</p>
+            <p>Like every web server, ours briefly receives your network address and browser description so it can answer the request. For measurement, those values are combined in memory with a secret that changes daily to recognize repeat visits during that day. The raw values are never written to analytics storage. After the day closes, the secret and daily tokens are destroyed; only aggregate totals remain, so visits cannot be connected across days, sites, devices, or accounts.</p>
+            <p>We automatically exclude browsers that send Global Privacy Control or Do Not Track. You can also exclude this browser without an account or cookie. This saves only the instruction <em>do not count me</em> in this browser:</p>
+            <p>
+                <button id="analytics-exclude" type="button" class="rounded bg-gray-900 px-4 py-2 text-white">Stop counting visits from this browser</button>
+                <button id="analytics-include" type="button" class="rounded border border-gray-400 px-4 py-2 text-gray-900">Count visits from this browser again</button>
+            </p>
+            <p id="analytics-choice-status" role="status" aria-live="polite"></p>
 
             <h2 id="how-we-share-data" class="text-2xl font-semibold text-gray-900">8. How we share data</h2>
             <p>We only share Gmail data in these cases:</p>
