@@ -6,6 +6,12 @@ The site is intentionally small: static HTML, CSS, JavaScript, and images live
 under `public/`. Runtime and production deployment configuration live in the
 private infrastructure repository and are not part of this project.
 
+The `.com` consent panel and footer control live in
+`public/js/analytics-consent.js`; shared copy, choice state, and the event gate
+come from the public `scrappy-kin-analytics` repository's
+`/_analytics/script.js`. Release them with the matching collector and Privacy
+Policy text. The website source alone does not prove what production serves.
+
 ## Local preview
 
 From the repository root:

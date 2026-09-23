@@ -30,7 +30,7 @@
         }
     </script>
     <script defer src="/_analytics/script.js"></script>
-    <script defer src="/js/analytics-choices.js"></script>
+    <script defer src="/js/analytics-consent.js"></script>
 </head>
 <body class="brand-site brand-legal bg-gray-50">
     <!-- Navigation -->
@@ -168,14 +168,10 @@
             </ul>
 
             <h2 id="website-measurement" class="text-2xl font-semibold text-gray-900">Website measurement</h2>
-            <p>We count coarse, first-party website activity so we can learn whether people find Scrappy Kin and which public pages are useful. We keep daily totals for page views, anonymous daily visitors, normalized page paths, and broad referring domains. We do not collect geography, browser or device categories, account identity, cookies, full URLs, or cross-site history.</p>
-            <p>Like every web server, ours briefly receives your network address and browser description so it can answer the request. For measurement, those values are combined in memory with a secret that changes daily to recognize repeat visits during that day. The raw values are never written to analytics storage. After the day closes, the secret and daily tokens are destroyed; only aggregate totals remain, so visits cannot be connected across days, sites, devices, or accounts.</p>
-            <p>We automatically exclude browsers that send Global Privacy Control or Do Not Track. You can also exclude this browser without an account or cookie. This saves only the instruction <em>do not count me</em> in this browser:</p>
-            <p>
-                <button id="analytics-exclude" type="button" class="rounded bg-gray-900 px-4 py-2 text-white">Stop counting visits from this browser</button>
-                <button id="analytics-include" type="button" class="rounded border border-gray-400 px-4 py-2 text-gray-900">Count visits from this browser again</button>
-            </p>
-            <p id="analytics-choice-status" role="status" aria-live="polite"></p>
+            <p>With your permission, we count online page visits to scrappykin.com, our blog, and Chess to understand whether our work is being used. Each page load adds one count. We keep daily totals and public page paths, not a count of unique people. We do not measure what you read, click, or do within a page, or how long you stay. Chess play is not measured.</p>
+            <p>Our analytics does not create a visitor identifier or keep a record linking visits from the same person, across days, or across our sites. It does not collect referring domains, geography, account identity, cookies, full URLs, query strings, or a raw event history. Like other web servers, ours receives your network address and browser description to answer a request. The analytics collector does not use your address to distinguish visitors; it briefly checks the browser description to omit known automated traffic. Neither value is saved in analytics data.</p>
+            <p>Measurement stays off until you choose to allow it on each site. Dismissing the choice, being unable to save it, or sending Global Privacy Control or Do Not Track keeps it off. You can change your choice using <em>Privacy choices</em> in that site's footer. Declining later stops future counts; past aggregate counts cannot be located or removed for one person because they contain no visitor identity. Privacy and administration pages are not counted.</p>
+            <p><button data-analytics-choices type="button" class="analytics-consent__footer-button">Open privacy choices for scrappykin.com</button></p>
 
             <h2 id="how-we-share-data" class="text-2xl font-semibold text-gray-900">8. How we share data</h2>
             <p>We only share Gmail data in these cases:</p>
