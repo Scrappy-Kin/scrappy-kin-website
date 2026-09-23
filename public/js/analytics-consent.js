@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const heading = make('h2', 'analytics-consent__heading', copy.heading);
     heading.id = 'analytics-consent-heading';
+    heading.tabIndex = -1;
     panel.append(heading, make('p', 'analytics-consent__purpose', copy.purpose));
 
     for (const [title, items, className] of [
@@ -65,18 +66,28 @@ document.addEventListener('DOMContentLoaded', () => {
             current === 'declined' ? copy.declinedStatus :
             current === 'unavailable' ? copy.unavailableStatus : copy.unsetStatus;
     };
-    const open = () => {
+    let opener = null;
+    const restoreFocus = () => {
+        if (opener && opener.isConnected) opener.focus();
+        opener = null;
+    };
+    const open = (event) => {
+        opener = event && event.currentTarget ? event.currentTarget : null;
         render();
         if (!dialog.open) {
             if (dialog.showModal) dialog.showModal();
             else dialog.setAttribute('open', '');
         }
-        decline.focus();
+        heading.focus();
     };
     const dismiss = () => {
         if (dialog.close) dialog.close();
-        else dialog.removeAttribute('open');
+        else {
+            dialog.removeAttribute('open');
+            restoreFocus();
+        }
     };
+    dialog.addEventListener('close', restoreFocus);
     close.addEventListener('click', dismiss);
     decline.addEventListener('click', () => {
         if (analytics.decline()) dismiss();
